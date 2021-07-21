@@ -1,10 +1,15 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { fetchCount } from './counterAPI';
 
 const initialState = {
   value: 0,
   status: 'idle',
 };
+
+function fetchCount(amount = 1) {
+    return new Promise((resolve) =>
+      setTimeout(() => resolve({ data: amount }), 500)
+    );
+  }
 
 // The function below is called a thunk and allows us to perform async logic. It
 // can be dispatched like a regular action: `dispatch(incrementAsync(10))`. This
