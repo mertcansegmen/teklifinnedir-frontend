@@ -1,22 +1,35 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './bootstrap.min.css'
-import './index.css';
-import App from './App';
-import { store } from './store';
-import { Provider } from 'react-redux';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import * as serviceWorker from "./serviceWorker";
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+
+import App from "./App";
+import { store } from "./store";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./index.css";
+
+i18n.use(initReactI18next).init({
+    supportedLngs: ["en-US", "tr-TR"],
+    resources: {
+        "tr-TR": {
+            translation: require("./assets/locales/tr-TR.json"),
+        },
+        "en-US": {
+            translation: require("./assets/locales/en-US.json"),
+        },
+    },
+    lng: "en-US",
+});
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <Provider store={store}>
+            <App />
+        </Provider>
+    </React.StrictMode>,
+    document.getElementById("root")
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
