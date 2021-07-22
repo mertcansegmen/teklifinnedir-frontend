@@ -1,0 +1,86 @@
+[
+    {
+        "id": 1,
+        "name": "Electronics",
+        "faIconName": "fab fa-adn",
+        "color": "primary"
+    },
+    {
+        "id": 2,
+        "name": "Furniture",
+        "faIconName": "fab fa-adn",
+        "color": "success"
+    },
+    {
+        "id": 3,
+        "name": "Clothing",
+        "faIconName": "fab fa-adn",
+        "color": "info"
+    },
+    {
+        "id": 4,
+        "name": "Accessories",
+        "faIconName": "fab fa-adn",
+        "color": "danger"
+    },
+    {
+        "id": 5,
+        "name": "Books",
+        "faIconName": "fab fa-adn",
+        "color": "warning"
+    },
+    {
+        "id": 6,
+        "name": "Outdoor",
+        "faIconName": "fab fa-adn",
+        "color": "primary"
+    },
+    {
+        "id": 7,
+        "name": "Office",
+        "faIconName": "fab fa-adn",
+        "color": "success"
+    },
+    {
+        "id": 8,
+        "name": "Appliances",
+        "faIconName": "fab fa-adn",
+        "color": "info"
+    },
+    {
+        "id": 9,
+        "name": "Jewelery",
+        "faIconName": "fab fa-adn",
+        "color": "danger"
+    },
+    {
+        "id": 10,
+        "name": "Jewelery",
+        "faIconName": "fab fa-adn",
+        "color": "warning"
+    },
+    {
+        "id": 11,
+        "name": "Jewelery",
+        "faIconName": "fab fa-adn",
+        "color": "primary"
+    },
+    {
+        "id": 12,
+        "name": "Jewelery",
+        "faIconName": "fab fa-adn",
+        "color": "success"
+    },
+    {
+        "id": 13,
+        "name": "Jewelery",
+        "faIconName": "fab fa-adn",
+        "color": "info"
+    },
+    {
+        "id": 14,
+        "name": "Jewelery",
+        "faIconName": "fab fa-adn",
+        "color": "danger"
+    }
+]
