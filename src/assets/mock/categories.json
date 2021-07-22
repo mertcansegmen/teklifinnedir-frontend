@@ -3,84 +3,84 @@
         "id": 1,
         "name": "Electronics",
         "faIconName": "fab fa-adn",
-        "color": "primary"
+        "colorCode": "#444444"
     },
     {
         "id": 2,
         "name": "Furniture",
         "faIconName": "fab fa-adn",
-        "color": "success"
+        "colorCode": "#4d70a8"
     },
     {
         "id": 3,
         "name": "Clothing",
         "faIconName": "fab fa-adn",
-        "color": "info"
+        "colorCode": "#85346a"
     },
     {
         "id": 4,
         "name": "Accessories",
         "faIconName": "fab fa-adn",
-        "color": "danger"
+        "colorCode": "#999439"
     },
     {
         "id": 5,
         "name": "Books",
         "faIconName": "fab fa-adn",
-        "color": "warning"
+        "colorCode": "#783325"
     },
     {
         "id": 6,
         "name": "Outdoor",
         "faIconName": "fab fa-adn",
-        "color": "primary"
+        "colorCode": "primary"
     },
     {
         "id": 7,
         "name": "Office",
         "faIconName": "fab fa-adn",
-        "color": "success"
+        "colorCode": "success"
     },
     {
         "id": 8,
         "name": "Appliances",
         "faIconName": "fab fa-adn",
-        "color": "info"
+        "colorCode": "info"
     },
     {
         "id": 9,
         "name": "Jewelery",
         "faIconName": "fab fa-adn",
-        "color": "danger"
+        "colorCode": "danger"
     },
     {
         "id": 10,
         "name": "Jewelery",
         "faIconName": "fab fa-adn",
-        "color": "warning"
+        "colorCode": "warning"
     },
     {
         "id": 11,
         "name": "Jewelery",
         "faIconName": "fab fa-adn",
-        "color": "primary"
+        "colorCode": "primary"
     },
     {
         "id": 12,
         "name": "Jewelery",
         "faIconName": "fab fa-adn",
-        "color": "success"
+        "colorCode": "success"
     },
     {
         "id": 13,
         "name": "Jewelery",
         "faIconName": "fab fa-adn",
-        "color": "info"
+        "colorCode": "info"
     },
     {
         "id": 14,
         "name": "Jewelery",
         "faIconName": "fab fa-adn",
-        "color": "danger"
+        "colorCode": "danger"
     }
 ]
