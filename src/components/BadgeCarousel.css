@@ -1,11 +1,3 @@
-.hr-scroll-area {
-    -ms-overflow-style: none; /* Internet Explorer 10+ */
-    scrollbar-width: none; /* Firefox */
-}
-.hr-scroll-area::-webkit-scrollbar {
-    display: none; /* Safari and Chrome */
-}
-
 .carousel-outer-container {
     position: relative;
 }
@@ -15,7 +7,6 @@
     z-index: 100;
     top: 50%;
     transform: translateY(-50%);
-    border-radius: 100px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     opacity: 80%;
@@ -24,9 +15,6 @@
 .carousel-right-btn {
     right: 0%;
 }
-.badge {
-    border-radius: 100px;
-}
 
 .hr-scroll-area {
     white-space: nowrap;
@@ -34,6 +22,9 @@
     overflow-x: scroll;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+    scroll-behavior: smooth;
 }
 
 .hr-scroll-area div {
@@ -44,4 +35,8 @@
     margin: 0 0.25%;
     display: inline-block;
     zoom: 1;
+}
+
+.hr-scroll-area::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
 }

@@ -21,31 +21,35 @@ const BadgeCarousel = ({ chipInfoList, before, after }) => {
                 <Button
                     size="sm"
                     variant="secondary"
-                    className="carousel-btn"
+                    className="carousel-btn max-radius"
                     onClick={() => (carousel.current.scrollLeft -= 100)}
                 >
                     <i className="fas fa-chevron-left"></i>
                 </Button>
             )}
+
             {mouseHovered && (
                 <Button
                     size="sm"
                     variant="secondary"
-                    className="carousel-btn carousel-right-btn"
+                    className="carousel-btn carousel-right-btn max-radius"
                     onClick={() => (carousel.current.scrollLeft += 100)}
                 >
                     <i className="fas fa-chevron-right"></i>
                 </Button>
             )}
-            <div
-                className="hr-scroll-area"
-                ref={carousel}
-                style={{ scrollBehavior: "smooth", zIndex: 1 }}
-            >
+
+            <div className="hr-scroll-area" ref={carousel}>
                 {before}
                 {chipInfoList.map((chipInfo) => (
                     <Link to={chipInfo.link} key={chipInfo.id} className="mx-2">
-                        <Button className="badge" variant={chipInfo.color}>
+                        <Button
+                            className="max-radius"
+                            style={{
+                                backgroundColor: chipInfo.colorCode,
+                                borderColor: chipInfo.colorCode,
+                            }}
+                        >
                             <FAIcon name={chipInfo.faIconName} />{" "}
                             {chipInfo.title}
                         </Button>
