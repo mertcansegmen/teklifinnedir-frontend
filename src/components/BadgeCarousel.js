@@ -6,14 +6,14 @@ import { Link } from "react-router-dom";
 import FAIcon from "./FAIcon";
 import "./BadgeCarousel.css";
 
-const BadgeCarousel = ({ chipInfoList, before, after }) => {
+const BadgeCarousel = ({ chipInfoList, before, after, className }) => {
     const carousel = useRef(null);
 
     const [mouseHovered, setMouseHovered] = useState(false);
 
     return (
         <div
-            className="carousel-outer-container"
+            className={`carousel-outer-container ${className}`}
             onMouseEnter={setMouseHovered}
             onMouseLeave={() => setMouseHovered(false)}
         >
