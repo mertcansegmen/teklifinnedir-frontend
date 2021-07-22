@@ -1,3 +1,11 @@
 .max-radius {
     border-radius: 1000px;
 }
+
+[type="radio"] {
+    display: none;
+}
+
+main {
+    min-height: 80vh;
+}
