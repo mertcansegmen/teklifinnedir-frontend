@@ -3,7 +3,6 @@ import React, { useRef, useState } from "react";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-import FAIcon from "./FAIcon";
 import "./BadgeCarousel.css";
 
 const BadgeCarousel = ({ chipInfoList, before, after, className }) => {
@@ -50,7 +49,7 @@ const BadgeCarousel = ({ chipInfoList, before, after, className }) => {
                                 borderColor: chipInfo.colorCode,
                             }}
                         >
-                            <FAIcon name={chipInfo.faIconName} />{" "}
+                            <i className={chipInfo.faIconName}></i>{" "}
                             {chipInfo.title}
                         </Button>
                     </Link>
