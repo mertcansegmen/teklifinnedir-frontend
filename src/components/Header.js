@@ -17,7 +17,7 @@ const Header = () => {
     return (
         <header>
             <Navbar
-                bg="dark"
+                bg="pri"
                 variant="dark"
                 expand="lg"
                 collapseOnSelect

@@ -28,7 +28,7 @@ const SearchBar = ({ className, history }) => {
             />
             <Button
                 type="submit"
-                variant="outline-success"
+                variant="outline-light"
                 className="max-radius ms-2"
             >
                 {t("search")}

@@ -1,3 +1,10 @@
 {
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "compressed",
+            "extensionName": ".min.css",
+            "savePath": "/src/assets"
+        }
+    ]
 }

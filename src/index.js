@@ -7,7 +7,7 @@ import { initReactI18next } from "react-i18next";
 
 import App from "./App";
 import { store } from "./store";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "./assets/bootstrap-customized.min.css";
 import "./index.css";
 
 i18n.use(initReactI18next).init({
