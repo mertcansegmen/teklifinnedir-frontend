@@ -13,15 +13,14 @@ const SelectLanguage = () => {
     }, [dispatch]);
 
     const languages = [
-        { name: "English", value: "en-US" },
-        { name: "Türkçe", value: "tr-TR" },
+        { name: "EN", value: "en-US" },
+        { name: "TR", value: "tr-TR" },
     ];
     return (
-        <ButtonGroup>
+        <ButtonGroup className="w-100">
             {languages.map((languageItem, idx) => (
                 <ToggleButton
                     key={idx}
-                    // id={`radio-${idx}`}
                     type="radio"
                     variant="outline-success"
                     name="radio"
