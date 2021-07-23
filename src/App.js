@@ -1,16 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import HomeScreen from "./screens/HomeScreen";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { useDispatch } from "react-redux";
+import { getLanguage } from "./slices/languageSlice";
 
 function App() {
-    // const dispatch = useDispatch();
+    const dispatch = useDispatch();
 
-    // useEffect(() => {
-    //     dispatch(getLanguage());
-    // }, [dispatch]);
+    useEffect(() => {
+        // Init language
+        dispatch(getLanguage());
+    }, [dispatch]);
 
     return (
         <Router>
