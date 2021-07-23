@@ -20,7 +20,6 @@ i18n.use(initReactI18next).init({
             translation: require("./assets/locales/en-US.json"),
         },
     },
-    lng: "en-US",
 });
 
 ReactDOM.render(
