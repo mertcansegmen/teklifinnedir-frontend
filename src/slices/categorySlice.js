@@ -7,7 +7,7 @@ const initialState = {
 };
 
 // Mock function, will be deleted and replaced with axios request
-function fetchCategories() {
+async function fetchCategories() {
     return new Promise((resolve, reject) => {
         const mockCategories = require("../assets/mock/categories.json");
         if (Math.random() > 0.2) {
