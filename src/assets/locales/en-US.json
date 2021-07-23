@@ -1,3 +1,9 @@
 {
-    "categories": "Categories"
+    "categories": "Categories",
+    "about": "About",
+    "privacyPolicy": "Privacy Policy",
+    "termsAndConditions": "Terms and Conditions",
+    "searchProducts": "Search Products",
+    "search": "Search",
+    "loginOrSignUp": "Login / Sign Up"
 }

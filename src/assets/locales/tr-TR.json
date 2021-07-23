@@ -1,3 +1,9 @@
 {
-    "categories": "Kategoriler"
+    "categories": "Kategoriler",
+    "about": "Hakkımızda",
+    "privacyPolicy": "Gizlilik Sözleşmesi",
+    "termsAndConditions": "Şartlar ve Koşullar",
+    "searchProducts": "Ürün Ara",
+    "search": "Ara",
+    "loginOrSignUp": "Giriş Yap / Kayıt Ol"
 }
