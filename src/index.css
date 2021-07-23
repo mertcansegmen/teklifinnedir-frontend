@@ -9,3 +9,7 @@
 main {
     min-height: 80vh;
 }
+
+.dropdown-toggle::after {
+    display: none;
+}
