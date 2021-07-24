@@ -6,6 +6,10 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { useDispatch } from "react-redux";
 import { getLanguage } from "./slices/languageSlice";
+import AboutScreen from "./screens/AboutScreen";
+import PrivacyPolicyScreen from "./screens/PrivacyPolicyScreen";
+import TermsAndConditionsScreen from "./screens/TermsAndConditionsScreen";
+import LoginScreen from "./screens/LoginScreen";
 
 function App() {
     const dispatch = useDispatch();
@@ -20,6 +24,16 @@ function App() {
             <Header />
             <main className="py-3">
                 <Container>
+                    <Route path="/about" component={AboutScreen} />
+                    <Route
+                        path="/privacyPolicy"
+                        component={PrivacyPolicyScreen}
+                    />
+                    <Route
+                        path="/termsAndConditions"
+                        component={TermsAndConditionsScreen}
+                    />
+                    <Route path="/login" component={LoginScreen} exact />
                     <Route path="/" component={HomeScreen} exact />
                 </Container>
             </main>
