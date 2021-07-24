@@ -17,3 +17,7 @@ main {
 .no-wrap {
     white-space: nowrap;
 }
+
+.fw-600 {
+    font-weight: 600;
+}
