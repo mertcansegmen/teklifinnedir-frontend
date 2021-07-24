@@ -3,15 +3,13 @@ import { Nav } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import { LinkContainer } from "react-router-bootstrap";
 
-const LoginSignUpNavLink = () => {
+const LoginSignUpNavLink = ({ className }) => {
     const { t } = useTranslation();
 
     return (
-        <LinkContainer to="/login">
-            <Nav.Link className="ms-2">
-                <p style={{ whiteSpace: "nowrap" }} className="mb-0">
-                    {t("loginOrSignUp")}
-                </p>
+        <LinkContainer to="/login" className={className}>
+            <Nav.Link>
+                <p className="mb-0 no-wrap">{t("loginOrSignUp")}</p>
             </Nav.Link>
         </LinkContainer>
     );

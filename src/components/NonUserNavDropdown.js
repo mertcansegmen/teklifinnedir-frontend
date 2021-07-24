@@ -4,13 +4,13 @@ import { useTranslation } from "react-i18next";
 import { LinkContainer } from "react-router-bootstrap";
 import SelectLanguage from "./SelectLanguage";
 
-export const NonUserNavDropdown = () => {
+export const NonUserNavDropdown = ({ className }) => {
     const { t } = useTranslation();
 
     return (
         <NavDropdown
             title={<i className="fas fa-ellipsis-v"></i>}
-            className="ms-2"
+            className={className}
         >
             <LinkContainer to="/about">
                 <NavDropdown.Item>{t("about")}</NavDropdown.Item>

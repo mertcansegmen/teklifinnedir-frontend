@@ -2,11 +2,12 @@ import React from "react";
 import { NavDropdown } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 
-const UserNavDropdown = ({ user }) => {
+const UserNavDropdown = ({ user, className }) => {
     const handleLogoutButtonClick = () => {};
 
     return (
         <NavDropdown
+            className={className}
             title={`${user?.firstName} ${user?.lastName}`}
             id="username"
         >

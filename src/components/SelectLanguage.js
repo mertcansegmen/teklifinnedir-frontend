@@ -3,10 +3,10 @@ import { ButtonGroup, ToggleButton } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { getLanguage, setLanguage } from "../slices/languageSlice";
 
-const SelectLanguage = () => {
+const SelectLanguage = ({ className }) => {
     const dispatch = useDispatch();
 
-    const { language } = useSelector((state) => state.language);
+    const { language } = useSelector((state) => state.language) || {};
 
     useEffect(() => {
         dispatch(getLanguage());
@@ -16,14 +16,14 @@ const SelectLanguage = () => {
         { name: "EN", value: "en-US" },
         { name: "TR", value: "tr-TR" },
     ];
+
     return (
-        <ButtonGroup className="w-100">
+        <ButtonGroup className={"w-100 " + className}>
             {languages.map((languageItem, idx) => (
                 <ToggleButton
                     key={idx}
                     type="radio"
                     variant="outline-pri"
-                    name="radio"
                     value={languageItem.value}
                     checked={language === languageItem.value}
                     onChange={(e) =>
