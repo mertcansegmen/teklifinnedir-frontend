@@ -2,9 +2,9 @@ import React from "react";
 import { Nav } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 
-const MessagesNavLink = () => {
+const MessagesNavLink = ({ className }) => {
     return (
-        <LinkContainer to="/messages" className="mt-1 ms-2">
+        <LinkContainer to="/messages" className={"mt-1 " + className}>
             <Nav.Link>
                 <i className="fas fa-comment-alt fa-lg"></i>
             </Nav.Link>

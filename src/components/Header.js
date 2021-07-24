@@ -8,6 +8,7 @@ import MessagesNavLink from "./MessagesNavLink";
 import UserNavDropdown from "./UserNavDropdown";
 import LoginSignUpNavLink from "./LoginSignUpNavLink";
 import { NonUserNavDropdown } from "./NonUserNavDropdown";
+import SelectProductType from "./SelectProductType";
 
 const Header = () => {
     const dispatch = useDispatch();
@@ -25,7 +26,11 @@ const Header = () => {
             >
                 <Container>
                     <LinkContainer to="/">
-                        <Navbar.Brand>GetGo</Navbar.Brand>
+                        <Navbar.Brand>
+                            <h4>
+                                <strong>GetGo</strong>
+                            </h4>
+                        </Navbar.Brand>
                     </LinkContainer>
                     <Navbar.Toggle />
                     <Navbar.Collapse id="basic-navbar-nav">
@@ -34,16 +39,20 @@ const Header = () => {
                                 <SearchBar history={history} />
                             )}
                         />
+                        <SelectProductType className="ms-4" />
                         <Nav>
                             {user ? (
                                 <>
-                                    <MessagesNavLink />
-                                    <UserNavDropdown user={user} />
+                                    <MessagesNavLink className="ms-4" />
+                                    <UserNavDropdown
+                                        user={user}
+                                        className="ms-4"
+                                    />
                                 </>
                             ) : (
                                 <>
-                                    <LoginSignUpNavLink />
-                                    <NonUserNavDropdown />
+                                    <LoginSignUpNavLink className="ms-4" />
+                                    <NonUserNavDropdown className="ms-4" />
                                 </>
                             )}
                         </Nav>
