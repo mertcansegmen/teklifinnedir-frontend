@@ -24,14 +24,16 @@ const HomeScreen = ({ match }) => {
 
     return (
         <>
-            <h2>{t("categories")}</h2>
+            <h3 className="mt-4">{t("categories")}</h3>
             <BadgeCarousel
+                className="mt-3"
                 chipInfoList={categories.map((category) => {
                     return {
                         id: category.id,
                         title: category.name,
                         colorCode: category.colorCode,
                         faIconName: category.faIconName,
+                        link: `search?category=${category.id}`,
                     };
                 })}
             />
