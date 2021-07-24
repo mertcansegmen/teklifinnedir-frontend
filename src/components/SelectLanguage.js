@@ -22,7 +22,7 @@ const SelectLanguage = () => {
                 <ToggleButton
                     key={idx}
                     type="radio"
-                    variant="outline-success"
+                    variant="outline-pri"
                     name="radio"
                     value={languageItem.value}
                     checked={language === languageItem.value}
