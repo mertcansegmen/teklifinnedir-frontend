@@ -24,7 +24,7 @@ const SelectProductType = ({ className }) => {
         <ButtonGroup className={className}>
             {productTypes.map((eachProductType, idx) => (
                 <ToggleButton
-                    className="no-wrap fw-600"
+                    className="no-wrap fw-700"
                     key={idx}
                     type="radio"
                     variant="outline-light"
@@ -34,7 +34,7 @@ const SelectProductType = ({ className }) => {
                         dispatch(setProductType(e.currentTarget.value))
                     }
                 >
-                    {eachProductType.name}
+                    <small>{eachProductType.name}</small>
                 </ToggleButton>
             ))}
         </ButtonGroup>
