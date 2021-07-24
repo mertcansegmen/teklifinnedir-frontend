@@ -13,3 +13,7 @@ main {
 .dropdown-toggle::after {
     display: none;
 }
+
+.no-wrap {
+    white-space: nowrap;
+}
