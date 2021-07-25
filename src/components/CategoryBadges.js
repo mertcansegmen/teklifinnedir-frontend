@@ -4,6 +4,7 @@ import BadgeCarousel from "../components/BadgeCarousel";
 import { getCategories } from "../slices/categorySlice";
 import { useTranslation } from "react-i18next";
 import Loader from "./Loader";
+import { getRandomColor } from "../utils";
 
 const CategoryBadges = ({ className }) => {
     const { t } = useTranslation();
@@ -42,7 +43,7 @@ const CategoryBadges = ({ className }) => {
                     return {
                         id: category.id,
                         title: category.name,
-                        colorCode: category.colorCode,
+                        colorCode: getRandomColor(),
                         faIconName: category.faIconName,
                         link: `search?category=${category.id}`,
                     };
