@@ -1,0 +1,37 @@
+.hover-pointer:hover {
+    cursor: pointer;
+    opacity: 80%;
+}
+
+.product-card-type-badge {
+    top: 5px;
+    left: 5px;
+}
+
+.product-card-favorite-icon {
+    top: 10px;
+    right: 10px;
+}
+
+.product-card-favorite-icon-toggled {
+    color: #ee515e;
+}
+
+.product-card {
+    border-radius: 20px !important;
+}
+
+.product-image {
+    object-fit: cover;
+    border-top-left-radius: 20px !important;
+    border-top-right-radius: 20px !important;
+    border-bottom: 1px solid #ddd;
+}
+
+.ellipsis-1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
