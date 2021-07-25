@@ -1,4 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
+import browsedProductsSlice from "./slices/browsedProductsSlice";
 import categorySlice from "./slices/categorySlice";
 import featuredProductsSlice from "./slices/featuredProductsSlice";
 import languageSlice from "./slices/languageSlice";
@@ -10,5 +11,6 @@ export const store = configureStore({
         language: languageSlice,
         productType: productTypeSlice,
         featuredProducts: featuredProductsSlice,
+        browsedProducts: browsedProductsSlice,
     },
 });
