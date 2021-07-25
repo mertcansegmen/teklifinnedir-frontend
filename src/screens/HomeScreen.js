@@ -1,4 +1,5 @@
 import React from "react";
+import BrowsingHistory from "../components/BrowsingHistory";
 import CategoryBadges from "../components/CategoryBadges";
 import FeaturedProducts from "../components/FeaturedProducts";
 
@@ -8,6 +9,8 @@ const HomeScreen = ({ match }) => {
             <CategoryBadges className="mt-4" />
 
             <FeaturedProducts className="mt-5" />
+
+            <BrowsingHistory className="mt-5" />
         </>
     );
 };
