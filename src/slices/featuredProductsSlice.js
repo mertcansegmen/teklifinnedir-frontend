@@ -10,11 +10,12 @@ const initialState = {
 async function fetchFeaturedProducts() {
     return new Promise((resolve, reject) => {
         const mockFeaturedProducts = require("../assets/mock/products.json");
-        if (Math.random() > 0.2) {
-            setTimeout(() => resolve(mockFeaturedProducts), 1500);
-        } else {
-            setTimeout(() => reject(new Error("fail")), 1500);
-        }
+
+        // if (Math.random() > 0.2) {
+        setTimeout(() => resolve(mockFeaturedProducts), 1500);
+        // } else {
+        //     setTimeout(() => reject(new Error("fail")), 1500);
+        // }
     });
 }
 
