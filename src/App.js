@@ -20,7 +20,8 @@ function App() {
     }, [dispatch]);
 
     return (
-        <Router>
+        // basename attribute is for github pages
+        <Router basename={"getgo-frontend"}>
             <Header />
             <main className="py-3">
                 <Container>
