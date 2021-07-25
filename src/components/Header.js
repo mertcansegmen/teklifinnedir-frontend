@@ -1,6 +1,6 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { LinkContainer } from "react-router-bootstrap";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import SearchBar from "./SearchBar";
@@ -11,8 +11,6 @@ import { NonUserNavDropdown } from "./NonUserNavDropdown";
 import SelectProductType from "./SelectProductType";
 
 const Header = () => {
-    const dispatch = useDispatch();
-
     const { user } = useSelector((state) => state.user) || {};
 
     return (
