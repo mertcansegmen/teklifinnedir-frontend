@@ -1,0 +1,170 @@
+[
+    {
+        "id": 1,
+        "name": "Sony Kulaklık",
+        "location": "Izmir",
+        "type": "buying",
+        "favorite": false,
+        "category": {
+            "name": "Electronics",
+            "id": "electronics"
+        },
+        "price": 199,
+        "currency": "TL",
+        "thumbnail": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
+    },
+    {
+        "id": 2,
+        "name": "Koltuk Takımı",
+        "location": "Istanbul",
+        "type": "buying",
+        "favorite": false,
+        "category": {
+            "name": "Furniture",
+            "id": "furniture"
+        },
+        "price": 1225,
+        "currency": "TL",
+        "thumbnail": "https://www.vgmobilyahome.com/lilyum-koltuk-takimi-modern-koltuklar-6728-19-B.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Xiaomi Redmi Note 9",
+        "location": "Konya",
+        "type": "buying",
+        "favorite": false,
+        "category": {
+            "name": "Electronics",
+            "id": "electronics"
+        },
+        "price": 1950,
+        "currency": "TL",
+        "thumbnail": "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/xiaomi/thumb/TeoriV2-107890-11_large.jpg"
+    },
+    {
+        "id": 4,
+        "name": "2011 Renault Kango",
+        "location": "Erzincan",
+        "type": "buying",
+        "favorite": false,
+        "category": {
+            "name": "Car",
+            "id": "car"
+        },
+        "price": 89000,
+        "currency": "TL",
+        "thumbnail": "https://1896481119.rsc.cdn77.org/large/292/312/f29231298c4eb26b459b761b9ed62587.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Salcano Bisiklet",
+        "location": "Manisa",
+        "type": "buying",
+        "favorite": false,
+        "category": {
+            "name": "Outdoor",
+            "id": "outdoor"
+        },
+        "price": 1200,
+        "currency": "TL",
+        "thumbnail": "https://www.salcano.com/images/6.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Kıyafet Dolabı",
+        "location": "Van",
+        "type": "buying",
+        "favorite": false,
+        "category": {
+            "name": "Furniture",
+            "id": "furniture"
+        },
+        "price": 180,
+        "currency": "TL",
+        "thumbnail": "https://img.letgo.com/images/63/44/60/eb/634460eb6d8e3ce3c88dd0aa900bc982.jpeg?impolicy=img_900"
+    },
+    {
+        "id": 7,
+        "name": "MSI Oyuncu Laptopu",
+        "location": "Istanbul",
+        "type": "buying",
+        "favorite": true,
+        "category": {
+            "name": "Electronics",
+            "id": "electronics"
+        },
+        "price": 4950,
+        "currency": "TL",
+        "thumbnail": "https://i0.shbdn.com/photos/12/18/77/x5_921121877pcp.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Apple Airpods",
+        "location": "Istanbul",
+        "type": "buying",
+        "favorite": false,
+        "category": {
+            "name": "Electronics",
+            "id": "electronics"
+        },
+        "price": 850,
+        "currency": "TL",
+        "thumbnail": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MV7N2?wid=1144&hei=1144&fmt=jpeg&qlt=95&.v=1551489688005"
+    },
+    {
+        "id": 9,
+        "name": "PS4 Oyun Konsolu Slim 500 GB",
+        "location": "Istanbul",
+        "type": "buying",
+        "favorite": false,
+        "category": {
+            "name": "Electronics",
+            "id": "electronics"
+        },
+        "price": 1450,
+        "currency": "TL",
+        "thumbnail": "https://cdn.akakce.com/sony/slim-500-gb-konsol-dualshock-z.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Samsung Mikrodalga Fırın",
+        "location": "Kocaeli",
+        "type": "buying",
+        "favorite": false,
+        "category": {
+            "name": "Appliances",
+            "id": "appliances"
+        },
+        "price": 450,
+        "currency": "TL",
+        "thumbnail": "https://cdn.cimri.io/image/1200x1200/samsungmikrodalgafrnlarfiyatlar_130914914.jpg"
+    },
+    {
+        "id": 11,
+        "name": "Yün Halı",
+        "location": "Izmir",
+        "type": "buying",
+        "favorite": false,
+        "category": {
+            "name": "Furniture",
+            "id": "furniture"
+        },
+        "price": 90,
+        "currency": "TL",
+        "thumbnail": "https://cdn.shopify.com/s/files/1/1078/5840/products/apex-cornelia-9291-bej-dekoratif-hali-dekoratif-halilar_1600x.jpg?v=1617626191"
+    },
+    {
+        "id": 12,
+        "name": "Philips Ekmek Kızartma Makinesi",
+        "location": "Istanbul",
+        "type": "buying",
+        "favorite": false,
+        "category": {
+            "name": "Appliances",
+            "id": "appliances"
+        },
+        "price": 130,
+        "currency": "TL",
+        "thumbnail": "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/philips/thumb/v2-86226-1_large.jpg"
+    }
+]
