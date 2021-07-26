@@ -1,22 +1,22 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import BadgeCarousel from "../components/BadgeCarousel";
-import { getCategories } from "../slices/categorySlice";
+import { getPopularSearches } from "../slices/popularSearchesSlice";
 import { useTranslation } from "react-i18next";
 import Loader from "./Loader";
 import { getRandomColor } from "../utils";
 
-const CategoryBadges = ({ className }) => {
+const PopularSearchesBadges = ({ className }) => {
     const { t } = useTranslation();
 
     const dispatch = useDispatch();
 
-    const { categories, loading, error } = useSelector(
-        (state) => state.categories
+    const { popularSearches, loading, error } = useSelector(
+        (state) => state.popularSearches
     );
 
     useEffect(() => {
-        dispatch(getCategories());
+        dispatch(getPopularSearches());
     }, [dispatch]);
 
     if (loading)
@@ -35,17 +35,17 @@ const CategoryBadges = ({ className }) => {
 
     return (
         <div className={className}>
-            <h3>{t("categories")}</h3>
+            <h3>{t("popularSearches")}</h3>
 
             <BadgeCarousel
                 className="mt-4"
-                chipInfoList={categories.map((category) => {
+                chipInfoList={popularSearches.map((popularSearch, idx) => {
                     return {
-                        id: category.id,
-                        title: category.name,
+                        id: idx,
+                        title: popularSearch,
                         colorCode: getRandomColor(),
-                        faIconName: category.faIconName,
-                        link: `search?category=${category.id}`,
+                        faIconName: "fas fa-search",
+                        link: `search?query=${popularSearch}`,
                     };
                 })}
             />
@@ -53,4 +53,4 @@ const CategoryBadges = ({ className }) => {
     );
 };
 
-export default CategoryBadges;
+export default PopularSearchesBadges;

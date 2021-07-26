@@ -2,8 +2,11 @@ import "./ProductCard.css";
 import React from "react";
 import { Card } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
+import { useTranslation } from "react-i18next";
 
 const ProductCard = ({ product, onFavoriteButtonClick, className }) => {
+    const { t } = useTranslation();
+
     return (
         <Card className={`position-relative product-card mb-3 ${className}`}>
             {/* Product Image */}
@@ -50,7 +53,7 @@ const ProductCard = ({ product, onFavoriteButtonClick, className }) => {
             {/* Product Type Badge */}
             <h6 className="position-absolute product-card-type-badge">
                 <span className="badge text-pri bg-light rounded-pill">
-                    {product?.type?.toUpperCase()}
+                    {product?.type === "buying" ? t("buying") : t("selling")}
                 </span>
             </h6>
 

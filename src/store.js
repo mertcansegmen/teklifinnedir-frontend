@@ -3,6 +3,7 @@ import browsedProductsSlice from "./slices/browsedProductsSlice";
 import categorySlice from "./slices/categorySlice";
 import featuredProductsSlice from "./slices/featuredProductsSlice";
 import languageSlice from "./slices/languageSlice";
+import popularSearchesSlice from "./slices/popularSearchesSlice";
 import productTypeSlice from "./slices/productTypeSlice";
 
 export const store = configureStore({
@@ -12,5 +13,6 @@ export const store = configureStore({
         productType: productTypeSlice,
         featuredProducts: featuredProductsSlice,
         browsedProducts: browsedProductsSlice,
+        popularSearches: popularSearchesSlice,
     },
 });
