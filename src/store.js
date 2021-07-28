@@ -5,6 +5,7 @@ import featuredProductsSlice from "./slices/featuredProductsSlice";
 import languageSlice from "./slices/languageSlice";
 import popularSearchesSlice from "./slices/popularSearchesSlice";
 import productTypeSlice from "./slices/productTypeSlice";
+import userSlice from "./slices/userSlice";
 
 export const store = configureStore({
     reducer: {
@@ -14,5 +15,6 @@ export const store = configureStore({
         featuredProducts: featuredProductsSlice,
         browsedProducts: browsedProductsSlice,
         popularSearches: popularSearchesSlice,
+        userInfo: userSlice,
     },
 });
