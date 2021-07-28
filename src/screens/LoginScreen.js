@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
-import { LinkContainer } from "react-router-bootstrap";
 import { Link } from "react-router-dom";
 import { login } from "../slices/userSlice";
 
@@ -13,7 +12,7 @@ const LoginScreen = ({ location, history }) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    const { userInfo, loading, error } = useSelector((state) => state.userInfo);
+    const { userInfo } = useSelector((state) => state.userInfo);
 
     useEffect(() => {
         if (userInfo) {

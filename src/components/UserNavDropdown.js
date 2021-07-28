@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { NavDropdown } from "react-bootstrap";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { LinkContainer } from "react-router-bootstrap";
-import { useHistory } from "react-router-dom";
 import { logout } from "../slices/userSlice";
 
 const UserNavDropdown = ({ user, className }) => {
