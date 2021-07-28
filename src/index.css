@@ -43,3 +43,23 @@ main {
 .fw-900 {
     font-weight: 900;
 }
+
+.elevated {
+    box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 50px;
+}
+
+.purple-gradient {
+    background-color: #9921e8;
+    background-image: linear-gradient(315deg, #9921e8 0%, #5f72be 74%);
+}
+
+.text-link {
+    color: #000;
+    text-decoration: none;
+}
+
+.text-link:hover {
+    color: #7161ef;
+}

@@ -12,5 +12,11 @@
     "browsingHistory": "Son Baktıklarım",
     "popularSearches": "Popüler Aramalar",
     "buying": "ALIYOR",
-    "selling": "SATIYOR"
+    "selling": "SATIYOR",
+    "loginTitle": "Hoşgeldin!",
+    "loginSubTitle": "Hesabına giriş yap",
+    "emailAddress": "E-Posta Adresi",
+    "password": "Şifre",
+    "signIn": "GİRİŞ YAP",
+    "dontHaveAnAccountCreateOne": "Hesabın yok mu? Buradan oluştur."
 }
