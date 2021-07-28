@@ -12,5 +12,11 @@
     "browsingHistory": "Browsing History",
     "popularSearches": "Popular Searches",
     "buying": "BUYING",
-    "selling": "SELLING"
+    "selling": "SELLING",
+    "loginTitle": "Hi There!",
+    "loginSubTitle": "Sign in to your account",
+    "emailAddress": "Email Address",
+    "password": "Password",
+    "signIn": "SIGN IN",
+    "dontHaveAnAccountCreateOne": "Don't have an account? Create One."
 }

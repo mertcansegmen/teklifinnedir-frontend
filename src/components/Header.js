@@ -1,5 +1,5 @@
-import React from "react";
-import { Route } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Route, useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { LinkContainer } from "react-router-bootstrap";
 import { Navbar, Nav, Container } from "react-bootstrap";
@@ -11,7 +11,15 @@ import { NonUserNavDropdown } from "./NonUserNavDropdown";
 import SelectProductType from "./SelectProductType";
 
 const Header = () => {
-    const { user } = useSelector((state) => state.user) || {};
+    const { userInfo } = useSelector((state) => state.userInfo) || {};
+
+    const history = useHistory();
+
+    useEffect(() => {
+        if (!userInfo) {
+            history.push("");
+        }
+    }, [history, userInfo]);
 
     return (
         <header>
@@ -39,17 +47,18 @@ const Header = () => {
                         />
                         <SelectProductType className="ms-4" />
                         <Nav>
-                            {user ? (
+                            {userInfo ? (
                                 <>
                                     <MessagesNavLink className="ms-4" />
                                     <UserNavDropdown
-                                        user={user}
-                                        className="ms-4"
+                                        user={userInfo}
+                                        className="ms-3"
                                     />
                                 </>
                             ) : (
                                 <>
                                     <LoginSignUpNavLink className="ms-4" />
+
                                     <NonUserNavDropdown className="ms-4" />
                                 </>
                             )}
