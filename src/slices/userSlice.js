@@ -75,10 +75,16 @@ export const logout = createAsyncThunk(
 );
 
 export const register = createAsyncThunk(
-    "users/logout",
+    "users/register",
     async (payload, { rejectWithValue }) => {
         try {
-            const { email, password, firstName, lastName } = payload;
+            const { email, password, confirmPassword, firstName, lastName } =
+                payload;
+
+            if (password !== confirmPassword) {
+                throw new Error("The passwords you entered are not matching.");
+            }
+
             // Axios request will be here
             const userInfo = await simulateRegister(
                 email,
