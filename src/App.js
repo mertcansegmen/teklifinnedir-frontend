@@ -10,6 +10,7 @@ import AboutScreen from "./screens/AboutScreen";
 import PrivacyPolicyScreen from "./screens/PrivacyPolicyScreen";
 import TermsAndConditionsScreen from "./screens/TermsAndConditionsScreen";
 import LoginScreen from "./screens/LoginScreen";
+import RegisterScreen from "./screens/RegisterScreen";
 
 function App() {
     const dispatch = useDispatch();
@@ -35,6 +36,7 @@ function App() {
                         component={TermsAndConditionsScreen}
                     />
                     <Route path="/login" component={LoginScreen} exact />
+                    <Route path="/signup" component={RegisterScreen} exact />
                     <Route path="/" component={HomeScreen} exact />
                 </Container>
             </main>
