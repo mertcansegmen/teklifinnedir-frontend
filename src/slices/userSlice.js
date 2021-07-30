@@ -24,6 +24,19 @@ async function simulateLogin() {
 }
 
 // Mock function, will be deleted and replaced with axios request
+async function simulateRegister() {
+    return new Promise((resolve, reject) => {
+        let mockUser = require("../assets/mock/user.json");
+
+        // if (Math.random() > 0.2) {
+        setTimeout(() => resolve(mockUser), 800);
+        // } else {
+        //     setTimeout(() => reject(new Error("fail")), 1500);
+        // }
+    });
+}
+
+// Mock function, will be deleted and replaced with axios request
 async function simulateLogout() {
     return new Promise((resolve, reject) => {
         // if (Math.random() > 0.2) {
@@ -55,6 +68,26 @@ export const logout = createAsyncThunk(
         try {
             // Axios request will be here
             await simulateLogout();
+        } catch (error) {
+            return rejectWithValue(error);
+        }
+    }
+);
+
+export const register = createAsyncThunk(
+    "users/logout",
+    async (payload, { rejectWithValue }) => {
+        try {
+            const { email, password, firstName, lastName } = payload;
+            // Axios request will be here
+            const userInfo = await simulateRegister(
+                email,
+                password,
+                firstName,
+                lastName
+            );
+
+            return userInfo;
         } catch (error) {
             return rejectWithValue(error);
         }
@@ -102,6 +135,28 @@ export const userSlice = createSlice({
             localStorage.removeItem("userInfo");
         },
         [logout.rejected]: (state, action) => {
+            const error = action.payload;
+
+            state.loading = false;
+            state.error =
+                error.response && error.response.data.message
+                    ? error.response.data.message
+                    : error.message;
+        },
+        [register.pending]: (state) => {
+            state.loading = true;
+            state.error = null;
+        },
+        [register.fulfilled]: (state, action) => {
+            const userInfo = action.payload;
+
+            state.error = null;
+            state.loading = false;
+            state.userInfo = userInfo;
+
+            localStorage.setItem("userInfo", JSON.stringify(userInfo));
+        },
+        [register.rejected]: (state, action) => {
             const error = action.payload;
 
             state.loading = false;
