@@ -18,5 +18,12 @@
     "emailAddress": "E-Posta Adresi",
     "password": "Şifre",
     "signIn": "GİRİŞ YAP",
-    "dontHaveAnAccountCreateOne": "Hesabın yok mu? Buradan oluştur."
+    "dontHaveAnAccountCreateOne": "Hesabın yok mu? Buradan oluştur.",
+    "registerTitle": "Hoşgeldin!",
+    "registerSubTitle": "Yeni bir hesap oluştur",
+    "confirmPassword": "Şifreni Onayla",
+    "firstName": "Ad",
+    "lastName": "Soyad",
+    "register": "KAYIT OL",
+    "haveAnAccountLogin": "Hesabın var mı? Buradan giriş yap."
 }
