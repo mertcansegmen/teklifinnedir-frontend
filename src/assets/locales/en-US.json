@@ -18,5 +18,12 @@
     "emailAddress": "Email Address",
     "password": "Password",
     "signIn": "SIGN IN",
-    "dontHaveAnAccountCreateOne": "Don't have an account? Create One."
+    "dontHaveAnAccountCreateOne": "Don't have an account? Create one.",
+    "registerTitle": "Hi There!",
+    "registerSubTitle": "Create a new account",
+    "confirmPassword": "Confirm Password",
+    "firstName": "Name",
+    "lastName": "Last Name",
+    "register": "SIGN UP",
+    "haveAnAccountLogin": "Already have an account? Log in."
 }
