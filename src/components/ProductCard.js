@@ -4,11 +4,14 @@ import { Card } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import { useTranslation } from "react-i18next";
 
-const ProductCard = ({ product, onFavoriteButtonClick, className }) => {
+const ProductCard = ({ product, onFavoriteButtonClick, className, style }) => {
     const { t } = useTranslation();
 
     return (
-        <Card className={`position-relative product-card mb-3 ${className}`}>
+        <Card
+            className={`position-relative product-card mb-3 ${className}`}
+            style={style}
+        >
             {/* Product Image */}
             <div className="ratio ratio-1x1">
                 <LinkContainer to={`/product/${product?.id}`}>

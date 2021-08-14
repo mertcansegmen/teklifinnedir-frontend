@@ -10,7 +10,7 @@ const initialState = {
 async function fetchBrowsedProducts() {
     return new Promise((resolve, reject) => {
         let mockBrowsedProducts = require("../assets/mock/products.json");
-        mockBrowsedProducts = mockBrowsedProducts.slice(2, 6);
+        mockBrowsedProducts = mockBrowsedProducts.slice(2, 8);
 
         // if (Math.random() > 0.2) {
         setTimeout(() => resolve(mockBrowsedProducts), 800);

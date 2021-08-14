@@ -1,72 +1,86 @@
 [
     {
-        "id": 1,
+        "id": "electronics",
         "name": "Electronics",
-        "faIconName": "fab fa-adn"
+        "faIconName": "fab fa-adn",
+        "colorCode": "#1abc9c"
     },
     {
-        "id": 2,
+        "id": "furniture",
         "name": "Furniture",
-        "faIconName": "fab fa-adn"
+        "faIconName": "fab fa-adn",
+        "colorCode": "#2ecc71"
     },
     {
-        "id": 3,
+        "id": "clothing",
         "name": "Clothing",
-        "faIconName": "fab fa-adn"
+        "faIconName": "fab fa-adn",
+        "colorCode": "#3498db"
     },
     {
-        "id": 4,
+        "id": "accessories",
         "name": "Accessories",
-        "faIconName": "fab fa-adn"
+        "faIconName": "fab fa-adn",
+        "colorCode": "#9b59b6"
     },
     {
-        "id": 5,
+        "id": "books",
         "name": "Books",
-        "faIconName": "fab fa-adn"
+        "faIconName": "fab fa-adn",
+        "colorCode": "#34495e"
     },
     {
-        "id": 6,
+        "id": "outdoor",
         "name": "Outdoor",
-        "faIconName": "fab fa-adn"
+        "faIconName": "fab fa-adn",
+        "colorCode": "#16a085"
     },
     {
-        "id": 7,
+        "id": "office",
         "name": "Office",
-        "faIconName": "fab fa-adn"
+        "faIconName": "fab fa-adn",
+        "colorCode": "#27ae60"
     },
     {
-        "id": 8,
+        "id": "appliances",
         "name": "Appliances",
-        "faIconName": "fab fa-adn"
+        "faIconName": "fab fa-adn",
+        "colorCode": "#2980b9"
     },
     {
-        "id": 9,
+        "id": "jewelery",
         "name": "Jewelery",
-        "faIconName": "fab fa-adn"
+        "faIconName": "fab fa-adn",
+        "colorCode": "#8e44ad"
     },
     {
-        "id": 10,
+        "id": "a",
         "name": "Jewelery",
-        "faIconName": "fab fa-adn"
+        "faIconName": "fab fa-adn",
+        "colorCode": "#2c3e50"
     },
     {
-        "id": 11,
+        "id": "b",
         "name": "Jewelery",
-        "faIconName": "fab fa-adn"
+        "faIconName": "fab fa-adn",
+        "colorCode": "#f1c40f"
     },
     {
-        "id": 12,
+        "id": "c",
         "name": "Jewelery",
-        "faIconName": "fab fa-adn"
+        "faIconName": "fab fa-adn",
+        "colorCode": "#e67e22"
     },
     {
-        "id": 13,
+        "id": "d",
         "name": "Jewelery",
-        "faIconName": "fab fa-adn"
+        "faIconName": "fab fa-adn",
+        "colorCode": "#e74c3c"
     },
     {
-        "id": 14,
+        "id": "e",
         "name": "Jewelery",
-        "faIconName": "fab fa-adn"
+        "faIconName": "fab fa-adn",
+        "colorCode": "#95a5a6"
     }
 ]
