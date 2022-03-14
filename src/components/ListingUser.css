@@ -1,0 +1,4 @@
+.listing-user-image {
+    object-fit: cover;
+    border-radius: 999px !important;
+}

@@ -1,0 +1,38 @@
+{
+    "id": 1,
+    "name": "Sony Kulaklık",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    "location": {
+        "city": "Izmir",
+        "town": "Konak",
+        "lat": "35.2323434",
+        "long": "41.43428234"
+    },
+    "type": "buying",
+    "favorite": true,
+    "category": {
+        "name": "Electronics",
+        "id": "electronics",
+        "faIconName": "fas fa-bolt",
+        "colorCode": "#e67e22"
+    },
+    "user": {
+        "id": 6,
+        "firstName": "Mertcan",
+        "lastName": "Seğmen",
+        "rating": 4.3
+    },
+    "price": {
+        "value": 199,
+        "currencySymbol": "₺",
+        "currency": "TRY"
+    },
+    "images": [
+        "https://www.sony.com.tr/image/3d54346a77face83dda2d361d34c5c5f?fmt=pjpeg&wid=1014&hei=396&bgcolor=F1F5F9&bgc=F1F5F9",
+        "https://www.sony.com.tr/image/a05db9e3dc0afaa2f3a2f36a0ca5b72c?fmt=pjpeg&wid=1014&hei=396&bgcolor=F1F5F9&bgc=F1F5F9",
+        "https://www.sony.com.tr/image/cddef344097de0a652b4e38a1c48cbb9?fmt=pjpeg&wid=1014&hei=396&bgcolor=F1F5F9&bgc=F1F5F9",
+        "https://www.sony.com.tr/image/cc3d84a02db3375b256213cdf479117d?fmt=pjpeg&wid=1014&hei=396&bgcolor=F1F5F9&bgc=F1F5F9"
+    ],
+    "seenCount": 1198,
+    "favoriteCount": 76
+}

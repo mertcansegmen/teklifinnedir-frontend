@@ -1,0 +1,14 @@
+.carousel-image {
+    object-fit: cover;
+    border-radius: 20px !important;
+}
+
+.carousel-bottom-image {
+    object-fit: cover;
+    border-radius: 23px !important;
+    width: 30px;
+}
+
+.carousel-bottom-container {
+    border-radius: 23px !important;
+}
