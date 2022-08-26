@@ -26,6 +26,7 @@ const SelectProductType = ({ className }) => {
                 <ToggleButton
                     className="no-wrap fw-700"
                     key={idx}
+                    id={`product-type-radio-${idx}`}
                     type="radio"
                     variant="outline-light"
                     value={eachProductType.value}

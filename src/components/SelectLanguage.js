@@ -22,6 +22,7 @@ const SelectLanguage = ({ className }) => {
             {languages.map((languageItem, idx) => (
                 <ToggleButton
                     key={idx}
+                    id={`language-radio-${idx}`}
                     type="radio"
                     variant="outline-pri"
                     value={languageItem.value}
