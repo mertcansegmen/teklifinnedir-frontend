@@ -23,7 +23,7 @@ function App() {
 
     return (
         // basename attribute is for github pages
-        <Router basename={"getgo-frontend"}>
+        <Router basename={"teklifinnedir-frontend"}>
             <Header />
             <main className="py-3">
                 <Container>

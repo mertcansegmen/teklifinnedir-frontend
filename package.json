@@ -1,6 +1,6 @@
 {
-    "name": "getgo-frontend",
-    "homepage": "https://mertcansegmen.github.io/getgo-frontend",
+    "name": "teklifinnedir-frontend",
+    "homepage": "https://mertcansegmen.github.io/teklifinnedir-frontend",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
