@@ -40,7 +40,7 @@ const RegisterScreen = ({ location, history }) => {
                         {t("registerSubTitle")}
                     </h4>
 
-                    <div class="mt-4">
+                    <div className="mt-4">
                         <label className="form-label">
                             {t("emailAddress")}
                         </label>
@@ -51,7 +51,7 @@ const RegisterScreen = ({ location, history }) => {
                         />
                     </div>
 
-                    <div class="mt-3">
+                    <div className="mt-3">
                         <label className="form-label">{t("password")}</label>
                         <input
                             type="password"
@@ -60,7 +60,7 @@ const RegisterScreen = ({ location, history }) => {
                         />
                     </div>
 
-                    <div class="mt-3">
+                    <div className="mt-3">
                         <label className="form-label">
                             {t("confirmPassword")}
                         </label>
@@ -71,7 +71,7 @@ const RegisterScreen = ({ location, history }) => {
                         />
                     </div>
 
-                    <div class="mt-4">
+                    <div className="mt-4">
                         <label className="form-label">{t("firstName")}</label>
                         <input
                             type="text"
@@ -80,7 +80,7 @@ const RegisterScreen = ({ location, history }) => {
                         />
                     </div>
 
-                    <div class="mt-4">
+                    <div className="mt-4">
                         <label className="form-label">{t("lastName")}</label>
                         <input
                             type="text"
