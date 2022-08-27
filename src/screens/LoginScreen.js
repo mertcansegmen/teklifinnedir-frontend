@@ -35,7 +35,7 @@ const LoginScreen = ({ location, history }) => {
                         {t("loginSubTitle")}
                     </h4>
 
-                    <div class="mt-4">
+                    <div className="mt-4">
                         <label className="form-label">
                             {t("emailAddress")}
                         </label>
@@ -46,7 +46,7 @@ const LoginScreen = ({ location, history }) => {
                         />
                     </div>
 
-                    <div class="mt-3">
+                    <div className="mt-3">
                         <label className="form-label">{t("password")}</label>
                         <input
                             type="password"
