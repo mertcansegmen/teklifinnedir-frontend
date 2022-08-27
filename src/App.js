@@ -11,6 +11,7 @@ import PrivacyPolicyScreen from "./screens/PrivacyPolicyScreen";
 import TermsAndConditionsScreen from "./screens/TermsAndConditionsScreen";
 import LoginScreen from "./screens/LoginScreen";
 import RegisterScreen from "./screens/RegisterScreen";
+import ProductScreen from "./screens/ProductScreen";
 
 function App() {
     const dispatch = useDispatch();
@@ -26,14 +27,17 @@ function App() {
             <Header />
             <main className="py-3">
                 <Container>
-                    <Route path="/about" component={AboutScreen} />
+                    <Route path="/product/:id" component={ProductScreen} />
+                    <Route path="/about" component={AboutScreen} exact />
                     <Route
                         path="/privacyPolicy"
                         component={PrivacyPolicyScreen}
+                        exact
                     />
                     <Route
                         path="/termsAndConditions"
                         component={TermsAndConditionsScreen}
+                        exact
                     />
                     <Route path="/login" component={LoginScreen} exact />
                     <Route path="/signup" component={RegisterScreen} exact />

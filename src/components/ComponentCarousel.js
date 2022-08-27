@@ -1,6 +1,5 @@
-import { array, string, element, func } from "prop-types";
 import React, { useRef, useState } from "react";
-import { Button, CardGroup } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 
 import "./ComponentCarousel.css";
 
@@ -46,14 +45,6 @@ const ComponentCarousel = ({ renderItem, data, before, after, className }) => {
             </div>
         </div>
     );
-};
-
-ComponentCarousel.propTypes = {
-    after: element,
-    before: element,
-    className: string,
-    data: array.isRequired,
-    renderItem: func.isRequired,
 };
 
 export default ComponentCarousel;
