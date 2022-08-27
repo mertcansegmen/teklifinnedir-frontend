@@ -22,8 +22,9 @@
     "scripts": {
         "predeploy": "npm run build",
         "deploy": "gh-pages -d build",
-        "start": "react-scripts start",
-        "build": "react-scripts build",
+        "start": "npm run build-bootstarp && react-scripts start",
+        "build": "npm run build-bootstarp && react-scripts build",
+        "build-bootstrap": "sass ./src/assets/bootstrap-customized.scss ./src/assets/bootstrap-customized.css",
         "test": "react-scripts test",
         "eject": "react-scripts eject"
     },
