@@ -1,0 +1,38 @@
+name: Prod Deploy(Netlify)
+
+on:
+    push:
+        branches:
+            - dev
+
+env:
+    CI: false
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        strategy:
+            matrix:
+                node-version: [16.x]
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+              with:
+                  ref: dev
+
+            - name: Install sass
+              run: npm install sass -g
+
+            - name: Install and build
+              run: npm install && npm run build
+
+            - name: Deploy
+              uses: nwtgck/actions-netlify@v1.2
+              with:
+                  publish-dir: build
+                  production-deploy: true
+              env:
+                  NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+                  NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID_PROD }}
