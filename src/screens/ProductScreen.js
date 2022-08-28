@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Col, Row } from "react-bootstrap";
-import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import ImageCarousel from "../components/ImageCarousel";
 import ListingDetails from "../components/ListingDetails";
@@ -9,11 +8,7 @@ import ListingUser from "../components/ListingUser";
 import Loader from "../components/Loader";
 import { getProduct } from "../slices/productSlice";
 
-const ProductScreen = ({ history, match }) => {
-    const { t } = useTranslation();
-
-    const [badgeColors, setBadgeColors] = useState([]);
-
+const ProductScreen = ({ match }) => {
     const dispatch = useDispatch();
 
     const { product, loading, error } = useSelector((state) => state.product);
