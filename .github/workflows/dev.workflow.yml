@@ -18,7 +18,9 @@ jobs:
 
         steps:
             - name: Checkout
-              uses: actions/checkout@v1
+              uses: actions/checkout@v3
+              with:
+                  ref: dev
 
             - name: Install sass
               run: npm install sass -g
@@ -29,7 +31,8 @@ jobs:
             - name: Deploy
               uses: nwtgck/actions-netlify@v1.2
               with:
-                  folder: build
+                  publish-dir: build
+                  production-deploy: true
               env:
                   NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
                   NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}

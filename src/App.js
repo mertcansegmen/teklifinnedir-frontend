@@ -22,8 +22,7 @@ function App() {
     }, [dispatch]);
 
     return (
-        // basename attribute is for github pages
-        <Router basename={"teklifinnedir-frontend"}>
+        <Router>
             <Header />
             <main className="py-3">
                 <Container>
