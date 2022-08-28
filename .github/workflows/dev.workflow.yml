@@ -28,9 +28,6 @@ jobs:
             - name: Install and build
               run: npm install && npm run build
 
-            - name: test ls build
-              run: cd build && ls
-
             - name: Deploy
               uses: nwtgck/actions-netlify@v1.2
               with:

@@ -34,7 +34,7 @@ const Header = () => {
                     <LinkContainer to="/">
                         <Navbar.Brand>
                             <h4>
-                                <strong>AAAAAAAAAA</strong>
+                                <strong>TeklifinNedir</strong>
                             </h4>
                         </Navbar.Brand>
                     </LinkContainer>
