@@ -15,14 +15,16 @@ const ListingUser = ({
 }) => {
     return (
         <div className={`d-flex align-items-center ${className}`}>
-            <span className=" ratio-1x1">
-                <img
-                    className="listing-user-image hover-pointer"
-                    style={{ width: "40px", height: "40px" }}
-                    src={userImage}
-                    alt={"product"}
-                />
-            </span>
+            <Link to={`/user/${userId}`}>
+                <span className=" ratio-1x1">
+                    <img
+                        className="listing-user-image hover-pointer"
+                        style={{ width: "40px", height: "40px" }}
+                        src={userImage}
+                        alt={"product"}
+                    />
+                </span>
+            </Link>
 
             <span className="d-flex flex-column ms-3">
                 <span>{`${userFirstName} ${userLastName}`}</span>
