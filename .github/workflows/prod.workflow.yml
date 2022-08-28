@@ -3,7 +3,7 @@ name: Prod Deploy(Netlify)
 on:
     push:
         branches:
-            - dev
+            - master
 
 env:
     CI: false
@@ -20,7 +20,7 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v3
               with:
-                  ref: dev
+                  ref: master
 
             - name: Install sass
               run: npm install sass -g
