@@ -41,5 +41,5 @@ npm run build
 
 ## Live Demo
 
-Dev(dev branch): [https://dev-teklifinnedir.netlify.app/](https://dev-teklifinnedir.netlify.app/)
-Prod(master branch): [https://prod-teklifinnedir.netlify.app/](https://prod-teklifinnedir.netlify.app/)
+- Dev(dev branch): [https://dev-teklifinnedir.netlify.app/](https://dev-teklifinnedir.netlify.app/)
+- Prod(master branch): [https://prod-teklifinnedir.netlify.app/](https://prod-teklifinnedir.netlify.app/)
