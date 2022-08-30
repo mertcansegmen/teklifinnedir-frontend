@@ -1,3 +1,4 @@
+import "antd/dist/antd.min.css";
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Container } from "react-bootstrap";
@@ -12,6 +13,7 @@ import TermsAndConditionsScreen from "./screens/TermsAndConditionsScreen";
 import LoginScreen from "./screens/LoginScreen";
 import RegisterScreen from "./screens/RegisterScreen";
 import ProductScreen from "./screens/ProductScreen";
+import ProfileScreen from "./screens/ProfileScreen";
 
 function App() {
     const dispatch = useDispatch();
@@ -38,6 +40,7 @@ function App() {
                         component={TermsAndConditionsScreen}
                         exact
                     />
+                    <Route path="/profile" component={ProfileScreen} exact />
                     <Route path="/login" component={LoginScreen} exact />
                     <Route path="/signup" component={RegisterScreen} exact />
                     <Route path="/" component={HomeScreen} exact />
