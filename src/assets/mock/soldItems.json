@@ -1,0 +1,62 @@
+[
+    {
+        "id": "7e8464fa-ea8e-4fe8-b930-b529d3b1df6c",
+        "name": "Apple Airpods",
+        "location": "Istanbul",
+        "type": "buying",
+        "favorite": false,
+        "category": {
+            "name": "Electronics",
+            "id": "electronics"
+        },
+        "price": 850,
+        "currency": "TL",
+        "thumbnail": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MV7N2?wid=1144&hei=1144&fmt=jpeg&qlt=95&.v=1551489688005",
+        "available": false
+    },
+    {
+        "id": "a10a1dac-3ef8-40c5-a73c-4249e04ab11f",
+        "name": "PS4 Oyun Konsolu Slim 500 GB",
+        "location": "Istanbul",
+        "type": "buying",
+        "favorite": false,
+        "category": {
+            "name": "Electronics",
+            "id": "electronics"
+        },
+        "price": 1450,
+        "currency": "TL",
+        "thumbnail": "https://cdn.akakce.com/sony/slim-500-gb-konsol-dualshock-z.jpg",
+        "available": false
+    },
+    {
+        "id": "12227029-982f-48e4-afbe-7e590390fa99",
+        "name": "Samsung Mikrodalga Fırın",
+        "location": "Kocaeli",
+        "type": "buying",
+        "favorite": false,
+        "category": {
+            "name": "Appliances",
+            "id": "appliances"
+        },
+        "price": 450,
+        "currency": "TL",
+        "thumbnail": "https://cdn.cimri.io/image/1200x1200/samsungmikrodalgafrnlarfiyatlar_130914914.jpg",
+        "available": false
+    },
+    {
+        "id": "3a887ff4-a4d8-44de-9f0a-e4499e03be2d",
+        "name": "Yün Halı",
+        "location": "Izmir",
+        "type": "buying",
+        "favorite": false,
+        "category": {
+            "name": "Furniture",
+            "id": "furniture"
+        },
+        "price": 90,
+        "currency": "TL",
+        "thumbnail": "https://www.halistores.com/100-dogal-yun-orgu-hali-jade-kahve-yun-hali-401809-93-O.jpg",
+        "available": false
+    }
+]
