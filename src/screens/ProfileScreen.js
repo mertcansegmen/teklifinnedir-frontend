@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import ProfileInfo from "../components/ProfileInfo";
 import { Tabs } from "antd";
@@ -11,6 +12,8 @@ import ProductList from "../components/ProductList";
 const { TabPane } = Tabs;
 
 const ProfileScreen = () => {
+    const { t } = useTranslation();
+
     const dispatch = useDispatch();
 
     const [activeTabKey, setActiveTabKey] = useState("itemsForSale");
@@ -48,15 +51,19 @@ const ProfileScreen = () => {
                 rating={profileInfo?.averageRating || 0}
             />
 
-            <Tabs activeKey={activeTabKey} onChange={setActiveTabKey}>
-                <TabPane tab="Items For Sale" key="itemsForSale">
+            <Tabs
+                activeKey={activeTabKey}
+                onChange={setActiveTabKey}
+                className="mt-4"
+            >
+                <TabPane tab={t("itemsForSaleTab")} key="itemsForSale">
                     <ProductList products={itemsForSale} />
                 </TabPane>
-                <TabPane tab="Sold Items" key="soldItems">
+                <TabPane tab={t("soldItemsTab")} key="soldItems">
                     <ProductList products={soldItems} />
                 </TabPane>
                 {favouriteItems && (
-                    <TabPane tab="Favourites" key="favourites">
+                    <TabPane tab={t("favouritesTab")} key="favourites">
                         <ProductList products={favouriteItems} />
                     </TabPane>
                 )}

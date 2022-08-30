@@ -25,5 +25,8 @@
     "firstName": "Ad",
     "lastName": "Soyad",
     "register": "KAYIT OL",
-    "haveAnAccountLogin": "Hesabın var mı? Buradan giriş yap."
+    "haveAnAccountLogin": "Hesabın var mı? Buradan giriş yap.",
+    "itemsForSaleTab": "SATIYOR",
+    "soldItemsTab": "SATILDI",
+    "favouritesTab": "FAVORİLER"
 }
