@@ -1,6 +1,6 @@
 import React from "react";
 
-function Rating({ value, text, color }) {
+function Rating({ value = 0, text = "", color = "#f8e825" }) {
     return (
         <span className="rating">
             <span className="me-1">
@@ -71,9 +71,5 @@ function Rating({ value, text, color }) {
         </span>
     );
 }
-
-Rating.defaultProps = {
-    color: "#f8e825",
-};
 
 export default Rating;
