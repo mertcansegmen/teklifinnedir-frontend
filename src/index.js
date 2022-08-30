@@ -25,11 +25,12 @@ i18n.use(initReactI18next).init({
 });
 
 root.render(
-    <React.StrictMode>
-        <Provider store={store}>
-            <App />
-        </Provider>
-    </React.StrictMode>
+    // TODO: upgrade react-dom to 6 cause it does not work with react 18 strict mode
+    // <React.StrictMode>
+    <Provider store={store}>
+        <App />
+    </Provider>
+    // </React.StrictMode>
 );
 
 serviceWorker.unregister();
