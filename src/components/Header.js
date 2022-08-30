@@ -24,16 +24,16 @@ const Header = () => {
     return (
         <header>
             <Navbar
-                bg="pri"
-                variant="dark"
+                bg="light"
+                variant="light"
                 expand="lg"
                 collapseOnSelect
-                className="py-3"
+                className="py-3 shadow "
             >
                 <Container>
                     <LinkContainer to="/">
                         <Navbar.Brand>
-                            <h4>
+                            <h4 className="text-pri">
                                 <strong>TeklifinNedir</strong>
                             </h4>
                         </Navbar.Brand>
