@@ -49,6 +49,7 @@ const ProfileScreen = () => {
                 firstName={profileInfo?.firstName || ""}
                 lastName={profileInfo?.lastName || ""}
                 rating={profileInfo?.averageRating || 0}
+                profileImage={profileInfo?.profileImage}
             />
 
             <Tabs
