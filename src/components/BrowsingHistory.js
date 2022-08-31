@@ -17,7 +17,7 @@ const BrowsingHistory = ({ className }) => {
         dispatch(getBrowsedProducts());
     }, [dispatch]);
 
-    if (!loading && !browsedProducts?.length) return <></>;
+    if (!error && !loading && !browsedProducts?.length) return <></>;
 
     return (
         <div className={className}>
