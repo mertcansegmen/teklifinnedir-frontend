@@ -9,7 +9,7 @@ const ResultError = ({
 }) => {
     if (!showRetryButton && onRetryButtonClick) {
         throw new Error(
-            "showRetryButton must be true if onRetryButtonClick is defined"
+            "showRetryButton must be true if onRetryButtonClick is defined."
         );
     }
 
