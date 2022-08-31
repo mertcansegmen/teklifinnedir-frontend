@@ -12,11 +12,13 @@ async function fetchBrowsedProducts() {
         let mockBrowsedProducts = require("../assets/mock/products.json");
         mockBrowsedProducts = mockBrowsedProducts.slice(2, 8);
 
-        // if (Math.random() > 0.2) {
-        setTimeout(() => resolve(mockBrowsedProducts), 800);
-        // } else {
-        //     setTimeout(() => reject(new Error("fail")), 1500);
-        // }
+        if (Math.random() > 0.5) {
+            setTimeout(() => resolve(mockBrowsedProducts), 800);
+        } else {
+            const errorMessage =
+                "Error while getting browsed products. Please try again later.";
+            setTimeout(() => reject(new Error(errorMessage)), 1500);
+        }
     });
 }
 
