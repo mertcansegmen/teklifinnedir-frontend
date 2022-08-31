@@ -5,11 +5,12 @@ import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
 
 import { getPopularSearches } from "../slices/popularSearchesSlice";
-import Loader from "./Loader";
 import { getRandomColor } from "../utils";
 import ComponentCarousel from "./ComponentCarousel";
+import BadgeCarouselSL from "./SkeletonLoaders/BadgeCarouselSL";
+import AlertError from "./Errors/AlertError";
 
-const PopularSearchesBadges = ({ className }) => {
+const PopularSearchesBadges = (props) => {
     const { t } = useTranslation();
 
     const [badgeColors, setBadgeColors] = useState([]);
@@ -33,20 +34,26 @@ const PopularSearchesBadges = ({ className }) => {
 
     if (loading)
         return (
-            <div className={className}>
-                <Loader />
+            <div {...props}>
+                <h3>{t("popularSearches")}</h3>
+                <BadgeCarouselSL />
             </div>
         );
 
     if (error)
         return (
-            <div className={className}>
-                <h1>{error}</h1>
+            <div {...props}>
+                <h3>{t("popularSearches")}</h3>
+                <AlertError
+                    message={error}
+                    showRetryButton
+                    onRetryButtonClick={() => dispatch(getPopularSearches())}
+                />
             </div>
         );
 
     return (
-        <div className={className}>
+        <div {...props}>
             <h3>{t("popularSearches")}</h3>
 
             <ComponentCarousel

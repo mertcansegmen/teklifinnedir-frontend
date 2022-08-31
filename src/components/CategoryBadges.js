@@ -5,10 +5,11 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
 
-import Loader from "./Loader";
+import AlertError from "./Errors/AlertError";
 import ComponentCarousel from "./ComponentCarousel";
+import BadgeCarouselSL from "./SkeletonLoaders/BadgeCarouselSL";
 
-const CategoryBadges = ({ className }) => {
+const CategoryBadges = (props) => {
     const { t } = useTranslation();
 
     const dispatch = useDispatch();
@@ -23,20 +24,26 @@ const CategoryBadges = ({ className }) => {
 
     if (loading)
         return (
-            <div className={className}>
-                <Loader />
+            <div {...props}>
+                <h3>{t("categories")}</h3>
+                <BadgeCarouselSL />
             </div>
         );
 
     if (error)
         return (
-            <div className={className}>
-                <h1>{error}</h1>
+            <div {...props}>
+                <h3>{t("categories")}</h3>
+                <AlertError
+                    message={error}
+                    showRetryButton
+                    onRetryButtonClick={() => dispatch(getCategories())}
+                />
             </div>
         );
 
     return (
-        <div className={className}>
+        <div {...props}>
             <h3>{t("categories")}</h3>
 
             <ComponentCarousel
