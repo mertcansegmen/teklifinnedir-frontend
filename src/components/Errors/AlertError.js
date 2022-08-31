@@ -3,7 +3,6 @@ import { Alert, Button } from "antd";
 
 const AlertError = ({
     message,
-    description,
     showRetryButton,
     onRetryButtonClick,
     ...props
