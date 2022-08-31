@@ -7,6 +7,10 @@ import popularSearchesSlice from "./slices/popularSearchesSlice";
 import productSlice from "./slices/productSlice";
 import productTypeSlice from "./slices/productTypeSlice";
 import userSlice from "./slices/userSlice";
+import profileInfoSlice from "./slices/profileInfoSlice";
+import itemsForSaleSlice from "./slices/itemsForSaleSlice";
+import soldItemsSlice from "./slices/soldItemsSlice";
+import favouriteItemsSlice from "./slices/favouriteItemsSlice";
 
 export const store = configureStore({
     reducer: {
@@ -18,5 +22,9 @@ export const store = configureStore({
         popularSearches: popularSearchesSlice,
         userInfo: userSlice,
         product: productSlice,
+        profileInfo: profileInfoSlice,
+        itemsForSale: itemsForSaleSlice,
+        soldItems: soldItemsSlice,
+        favouriteItems: favouriteItemsSlice,
     },
 });

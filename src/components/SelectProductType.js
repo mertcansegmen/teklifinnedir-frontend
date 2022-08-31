@@ -28,7 +28,7 @@ const SelectProductType = ({ className }) => {
                     key={idx}
                     id={`product-type-radio-${idx}`}
                     type="radio"
-                    variant="outline-light"
+                    variant="outline-pri"
                     value={eachProductType.value}
                     checked={productType === eachProductType.value}
                     onChange={(e) =>

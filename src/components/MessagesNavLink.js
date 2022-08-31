@@ -6,7 +6,7 @@ const MessagesNavLink = ({ className }) => {
     return (
         <LinkContainer to="/messages" className={"mt-1 " + className}>
             <Nav.Link>
-                <i className="fas fa-comment-alt fa-lg"></i>
+                <i className="fas fa-comment-alt fa-lg text-pri"></i>
             </Nav.Link>
         </LinkContainer>
     );

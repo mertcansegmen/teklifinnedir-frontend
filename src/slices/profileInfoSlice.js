@@ -1,61 +1,62 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    popularSearches: [],
+    profileInfo: null,
     loading: false,
     error: null,
 };
 
 // Mock function, will be deleted and replaced with axios request
-async function fetchPopularSearches() {
+async function fetchProfileInfo() {
     return new Promise((resolve, reject) => {
-        const mockPopularSearches = require("../assets/mock/popularSearches.json");
+        const mockProfileInfo = require("../assets/mock/profileInfo.json");
 
         if (Math.random() > 0.5) {
-            setTimeout(() => resolve(mockPopularSearches), 1000);
+            setTimeout(() => resolve(mockProfileInfo), 1000);
         } else {
             const errorMessage =
-                "Error while getting popular searches. Please try again later.";
+                "Error while getting profile info. Please try again later.";
             setTimeout(() => reject(new Error(errorMessage)), 1000);
         }
     });
 }
 
-export const getPopularSearches = createAsyncThunk(
-    "searches/getPopularSearches",
+export const getProfileInfo = createAsyncThunk(
+    "profileInfo/getProfileInfo",
     async (payload, { rejectWithValue }) => {
         try {
+            const { userId } = payload;
             // Axios request will be here
-            const popularSearches = await fetchPopularSearches();
+            const profileInfo = await fetchProfileInfo(userId);
 
-            return popularSearches;
+            return profileInfo;
         } catch (error) {
             return rejectWithValue(error);
         }
     }
 );
 
-export const popularSearchesSlice = createSlice({
-    name: "popularSearches",
+export const profileInfoSlice = createSlice({
+    name: "profileInfo",
     initialState,
     reducers: {},
     extraReducers: {
-        [getPopularSearches.pending]: (state) => {
-            state.popularSearches = [];
+        [getProfileInfo.pending]: (state) => {
+            state.profileInfo = [];
             state.loading = true;
             state.error = null;
         },
-        [getPopularSearches.fulfilled]: (state, action) => {
-            const popularSearches = action.payload;
+        [getProfileInfo.fulfilled]: (state, action) => {
+            const profileInfo = action.payload;
 
+            state.profileInfo = profileInfo;
             state.error = null;
             state.loading = false;
-            state.popularSearches = popularSearches;
         },
-        [getPopularSearches.rejected]: (state, action) => {
+        [getProfileInfo.rejected]: (state, action) => {
             const error = action.payload;
 
-            state.popularSearches = [];
+            state.profileInfo = null;
             state.loading = false;
             state.error =
                 error.response && error.response.data.message
@@ -65,4 +66,4 @@ export const popularSearchesSlice = createSlice({
     },
 });
 
-export default popularSearchesSlice.reducer;
+export default profileInfoSlice.reducer;

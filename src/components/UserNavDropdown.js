@@ -21,10 +21,10 @@ const UserNavDropdown = ({ user, className }) => {
                 className={className}
                 title={
                     <div className="d-flex align-items-center">
-                        <span className="fw-500">
+                        <span className="fw-500 text-pri">
                             {`${user?.firstName || ""} ${user?.lastName || ""}`}
                         </span>
-                        <i className="fas fa-sort-down text-light ms-2 pb-1"></i>
+                        <i className="fas fa-sort-down text-pri ms-2 pb-1"></i>
                     </div>
                 }
             >

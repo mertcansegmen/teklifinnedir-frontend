@@ -106,7 +106,7 @@ export const userSlice = createSlice({
     reducers: {},
     extraReducers: {
         [login.pending]: (state) => {
-            state.userInfo = [];
+            state.userInfo = null;
             state.loading = true;
             state.error = null;
         },
@@ -122,7 +122,7 @@ export const userSlice = createSlice({
         [login.rejected]: (state, action) => {
             const error = action.payload;
 
-            state.userInfo = [];
+            state.userInfo = null;
             state.loading = false;
             state.error =
                 error.response && error.response.data.message

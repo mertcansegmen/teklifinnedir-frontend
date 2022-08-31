@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { getBrowsedProducts } from "../slices/browsedProductsSlice";
-import Loader from "./Loader";
 import ProductList from "./ProductList";
 
 const BrowsingHistory = ({ className }) => {
@@ -18,27 +17,21 @@ const BrowsingHistory = ({ className }) => {
         dispatch(getBrowsedProducts());
     }, [dispatch]);
 
-    if (loading)
-        return (
-            <div className={className}>
-                <Loader />
-            </div>
-        );
-
-    if (error)
-        return (
-            <div className={className}>
-                <h1>{error}</h1>
-            </div>
-        );
-
-    if (!browsedProducts?.length) return <></>;
+    if (!error && !loading && !browsedProducts?.length) return <></>;
 
     return (
         <div className={className}>
             <h3>{t("browsingHistory")}</h3>
 
-            <ProductList products={browsedProducts} className="mt-4" />
+            <ProductList
+                products={browsedProducts}
+                error={error}
+                showRetryButton
+                onRetryButtonClick={() => dispatch(getBrowsedProducts())}
+                loading={loading}
+                loadingItemSize={6}
+                className="mt-4"
+            />
         </div>
     );
 };

@@ -1,61 +1,62 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    popularSearches: [],
+    soldItems: [],
     loading: false,
     error: null,
 };
 
 // Mock function, will be deleted and replaced with axios request
-async function fetchPopularSearches() {
+async function fetchSoldItems(userId) {
     return new Promise((resolve, reject) => {
-        const mockPopularSearches = require("../assets/mock/popularSearches.json");
+        const mockSoldItems = require("../assets/mock/soldItems.json");
 
         if (Math.random() > 0.5) {
-            setTimeout(() => resolve(mockPopularSearches), 1000);
+            setTimeout(() => resolve(mockSoldItems), 1000);
         } else {
             const errorMessage =
-                "Error while getting popular searches. Please try again later.";
+                "Error while getting sold items. Please try again later.";
             setTimeout(() => reject(new Error(errorMessage)), 1000);
         }
     });
 }
 
-export const getPopularSearches = createAsyncThunk(
-    "searches/getPopularSearches",
+export const getSoldItems = createAsyncThunk(
+    "soldItems/getSoldItems",
     async (payload, { rejectWithValue }) => {
         try {
+            const { userId } = payload;
             // Axios request will be here
-            const popularSearches = await fetchPopularSearches();
+            const soldItems = await fetchSoldItems(userId);
 
-            return popularSearches;
+            return soldItems;
         } catch (error) {
             return rejectWithValue(error);
         }
     }
 );
 
-export const popularSearchesSlice = createSlice({
-    name: "popularSearches",
+export const soldItemsSlice = createSlice({
+    name: "soldItems",
     initialState,
     reducers: {},
     extraReducers: {
-        [getPopularSearches.pending]: (state) => {
-            state.popularSearches = [];
+        [getSoldItems.pending]: (state) => {
+            state.soldItems = [];
             state.loading = true;
             state.error = null;
         },
-        [getPopularSearches.fulfilled]: (state, action) => {
-            const popularSearches = action.payload;
+        [getSoldItems.fulfilled]: (state, action) => {
+            const soldItems = action.payload;
 
+            state.soldItems = soldItems;
             state.error = null;
             state.loading = false;
-            state.popularSearches = popularSearches;
         },
-        [getPopularSearches.rejected]: (state, action) => {
+        [getSoldItems.rejected]: (state, action) => {
             const error = action.payload;
 
-            state.popularSearches = [];
+            state.soldItems = [];
             state.loading = false;
             state.error =
                 error.response && error.response.data.message
@@ -65,4 +66,4 @@ export const popularSearchesSlice = createSlice({
     },
 });
 
-export default popularSearchesSlice.reducer;
+export default soldItemsSlice.reducer;

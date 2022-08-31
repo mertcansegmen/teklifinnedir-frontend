@@ -25,5 +25,8 @@
     "firstName": "Name",
     "lastName": "Last Name",
     "register": "SIGN UP",
-    "haveAnAccountLogin": "Already have an account? Log in."
+    "haveAnAccountLogin": "Already have an account? Log in.",
+    "itemsForSaleTab": "FOR SALE",
+    "soldItemsTab": "SOLD",
+    "favouritesTab": "FAVOURITES"
 }

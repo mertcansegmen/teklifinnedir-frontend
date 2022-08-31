@@ -1,0 +1,47 @@
+[
+    {
+        "id": "9d672c1f-6a03-47ca-bfe5-142b1e624c84",
+        "name": "2011 Renault Kango",
+        "location": "Erzincan",
+        "type": "buying",
+        "favorite": false,
+        "category": {
+            "name": "Car",
+            "id": "car"
+        },
+        "price": 89000,
+        "currency": "TL",
+        "thumbnail": "https://1896481119.rsc.cdn77.org/large/292/312/f29231298c4eb26b459b761b9ed62587.jpg",
+        "available": true
+    },
+    {
+        "id": "a1d70939-522c-4ae0-93cc-db6115db140f",
+        "name": "Sony Kulaklık",
+        "location": "Izmir",
+        "type": "buying",
+        "favorite": false,
+        "category": {
+            "name": "Electronics",
+            "id": "electronics"
+        },
+        "price": 199,
+        "currency": "TL",
+        "thumbnail": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80",
+        "available": true
+    },
+    {
+        "id": "e1ac25d3-9c40-4232-ba9d-8c3d5e7a0082",
+        "name": "Koltuk Takımı",
+        "location": "Istanbul",
+        "type": "buying",
+        "favorite": false,
+        "category": {
+            "name": "Furniture",
+            "id": "furniture"
+        },
+        "price": 1225,
+        "currency": "TL",
+        "thumbnail": "https://www.evmoda.com.tr/ewa-modern-koltuk-takimi-50498-49-B.jpg",
+        "available": true
+    }
+]

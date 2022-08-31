@@ -9,7 +9,7 @@ export const NonUserNavDropdown = ({ className }) => {
 
     return (
         <NavDropdown
-            title={<i className="fas fa-ellipsis-v"></i>}
+            title={<i className="fas fa-ellipsis-v text-pri"></i>}
             className={className}
         >
             <LinkContainer to="/about">

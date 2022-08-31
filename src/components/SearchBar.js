@@ -26,11 +26,7 @@ const SearchBar = ({ className, history }) => {
                 className="max-radius"
                 onChange={(e) => setKeyword(e.target.value)}
             />
-            <Button
-                type="submit"
-                variant="outline-light"
-                className="max-radius ms-2"
-            >
+            <Button type="submit" variant="pri" className="max-radius ms-2">
                 {t("search")}
             </Button>
         </Form>

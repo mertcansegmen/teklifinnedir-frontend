@@ -1,61 +1,62 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    popularSearches: [],
+    favouriteItems: [],
     loading: false,
     error: null,
 };
 
 // Mock function, will be deleted and replaced with axios request
-async function fetchPopularSearches() {
+async function fetchFavouriteItems(userId) {
     return new Promise((resolve, reject) => {
-        const mockPopularSearches = require("../assets/mock/popularSearches.json");
+        const mockFavouriteItems = require("../assets/mock/favouriteItems.json");
 
         if (Math.random() > 0.5) {
-            setTimeout(() => resolve(mockPopularSearches), 1000);
+            setTimeout(() => resolve(mockFavouriteItems), 1000);
         } else {
             const errorMessage =
-                "Error while getting popular searches. Please try again later.";
+                "Error while getting favourite items. Please try again later.";
             setTimeout(() => reject(new Error(errorMessage)), 1000);
         }
     });
 }
 
-export const getPopularSearches = createAsyncThunk(
-    "searches/getPopularSearches",
+export const getFavouriteItems = createAsyncThunk(
+    "favouriteItems/getFavouriteItems",
     async (payload, { rejectWithValue }) => {
         try {
+            const { userId } = payload;
             // Axios request will be here
-            const popularSearches = await fetchPopularSearches();
+            const favouriteItems = await fetchFavouriteItems(userId);
 
-            return popularSearches;
+            return favouriteItems;
         } catch (error) {
             return rejectWithValue(error);
         }
     }
 );
 
-export const popularSearchesSlice = createSlice({
-    name: "popularSearches",
+export const favouriteItemsSlice = createSlice({
+    name: "favouriteItems",
     initialState,
     reducers: {},
     extraReducers: {
-        [getPopularSearches.pending]: (state) => {
-            state.popularSearches = [];
+        [getFavouriteItems.pending]: (state) => {
+            state.favouriteItems = [];
             state.loading = true;
             state.error = null;
         },
-        [getPopularSearches.fulfilled]: (state, action) => {
-            const popularSearches = action.payload;
+        [getFavouriteItems.fulfilled]: (state, action) => {
+            const favouriteItems = action.payload;
 
+            state.favouriteItems = favouriteItems;
             state.error = null;
             state.loading = false;
-            state.popularSearches = popularSearches;
         },
-        [getPopularSearches.rejected]: (state, action) => {
+        [getFavouriteItems.rejected]: (state, action) => {
             const error = action.payload;
 
-            state.popularSearches = [];
+            state.favouriteItems = [];
             state.loading = false;
             state.error =
                 error.response && error.response.data.message
@@ -65,4 +66,4 @@ export const popularSearchesSlice = createSlice({
     },
 });
 
-export default popularSearchesSlice.reducer;
+export default favouriteItemsSlice.reducer;
