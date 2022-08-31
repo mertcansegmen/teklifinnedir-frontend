@@ -8,6 +8,7 @@ import { getItemsForSale } from "../slices/itemsForSaleSlice";
 import { getSoldItems } from "../slices/soldItemsSlice";
 import { getFavouriteItems } from "../slices/favouriteItemsSlice";
 import ProductList from "../components/ProductList";
+import ProfileInfoSL from "../components/SkeletonLoaders/ProfileInfoSL";
 
 const { TabPane } = Tabs;
 
@@ -20,19 +21,29 @@ const ProfileScreen = () => {
 
     const { userInfo } = useSelector((state) => state.userInfo);
 
-    const { profileInfo, profileInfoLoading, profileInfoError } = useSelector(
-        (state) => state.profileInfo
-    );
+    const {
+        profileInfo,
+        loading: profileInfoLoading,
+        error: profileInfoError,
+    } = useSelector((state) => state.profileInfo);
 
-    const { itemsForSale, itemsForSaleLoading, itemsForSaleError } =
-        useSelector((state) => state.itemsForSale);
+    const {
+        itemsForSale,
+        loading: itemsForSaleLoading,
+        error: itemsForSaleError,
+    } = useSelector((state) => state.itemsForSale);
 
-    const { soldItems, soldItemsLoading, soldItemsError } = useSelector(
-        (state) => state.soldItems
-    );
+    const {
+        soldItems,
+        loading: soldItemsLoading,
+        error: soldItemsError,
+    } = useSelector((state) => state.soldItems);
 
-    const { favouriteItems, favouriteItemsLoading, favouriteItemsError } =
-        useSelector((state) => state.favouriteItems);
+    const {
+        favouriteItems,
+        loading: favouriteItemsLoading,
+        error: favouriteItemsError,
+    } = useSelector((state) => state.favouriteItems);
 
     useEffect(() => {
         if (userInfo?.id) {
@@ -50,6 +61,13 @@ const ProfileScreen = () => {
                 lastName={profileInfo?.lastName || ""}
                 rating={profileInfo?.averageRating || 0}
                 profileImage={profileInfo?.profileImage}
+                loading={profileInfoLoading}
+                error={profileInfoError}
+                showRetryButton
+                onRetryButtonClick={() =>
+                    userInfo?.id && dispatch(getProfileInfo(userInfo.id))
+                }
+                className={"mt-5"}
             />
 
             <Tabs
@@ -58,14 +76,48 @@ const ProfileScreen = () => {
                 className="mt-4"
             >
                 <TabPane tab={t("itemsForSaleTab")} key="itemsForSale">
-                    <ProductList products={itemsForSale} />
+                    <ProductList
+                        products={itemsForSale}
+                        error={itemsForSaleError}
+                        showRetryButton
+                        onRetryButtonClick={() =>
+                            userInfo?.id &&
+                            dispatch(getItemsForSale(userInfo.id))
+                        }
+                        loading={itemsForSaleLoading}
+                        loadingItemSize={12}
+                        emptyMessage="This user has no items for sale."
+                    />
                 </TabPane>
+
                 <TabPane tab={t("soldItemsTab")} key="soldItems">
-                    <ProductList products={soldItems} />
+                    <ProductList
+                        products={soldItems}
+                        error={soldItemsError}
+                        showRetryButton
+                        onRetryButtonClick={() =>
+                            userInfo?.id && dispatch(getSoldItems(userInfo.id))
+                        }
+                        loading={soldItemsLoading}
+                        loadingItemSize={12}
+                        emptyMessage="This user has not sold any items."
+                    />
                 </TabPane>
+
                 {favouriteItems && (
                     <TabPane tab={t("favouritesTab")} key="favourites">
-                        <ProductList products={favouriteItems} />
+                        <ProductList
+                            products={favouriteItems}
+                            error={favouriteItemsError}
+                            showRetryButton
+                            onRetryButtonClick={() =>
+                                userInfo?.id &&
+                                dispatch(getFavouriteItems(userInfo.id))
+                            }
+                            loading={favouriteItemsLoading}
+                            loadingItemSize={12}
+                            emptyMessage="No favourite items found."
+                        />
                     </TabPane>
                 )}
             </Tabs>
