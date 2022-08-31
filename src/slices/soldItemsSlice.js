@@ -11,11 +11,13 @@ async function fetchSoldItems(userId) {
     return new Promise((resolve, reject) => {
         const mockSoldItems = require("../assets/mock/soldItems.json");
 
-        // if (Math.random() > 0.2) {
-        setTimeout(() => resolve(mockSoldItems), 1000);
-        // } else {
-        //     setTimeout(() => reject(new Error("fail")), 1000);
-        // }
+        if (Math.random() > 0.5) {
+            setTimeout(() => resolve(mockSoldItems), 1000);
+        } else {
+            const errorMessage =
+                "Error while getting sold items. Please try again later.";
+            setTimeout(() => reject(new Error(errorMessage)), 1000);
+        }
     });
 }
 

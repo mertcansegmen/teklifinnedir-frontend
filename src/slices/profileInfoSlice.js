@@ -11,11 +11,13 @@ async function fetchProfileInfo() {
     return new Promise((resolve, reject) => {
         const mockProfileInfo = require("../assets/mock/profileInfo.json");
 
-        // if (Math.random() > 0.2) {
-        setTimeout(() => resolve(mockProfileInfo), 1000);
-        // } else {
-        //     setTimeout(() => reject(new Error("fail")), 1000);
-        // }
+        if (Math.random() > 0.5) {
+            setTimeout(() => resolve(mockProfileInfo), 1000);
+        } else {
+            const errorMessage =
+                "Error while getting profile info. Please try again later.";
+            setTimeout(() => reject(new Error(errorMessage)), 1000);
+        }
     });
 }
 

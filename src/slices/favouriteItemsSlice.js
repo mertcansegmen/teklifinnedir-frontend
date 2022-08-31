@@ -11,11 +11,13 @@ async function fetchFavouriteItems(userId) {
     return new Promise((resolve, reject) => {
         const mockFavouriteItems = require("../assets/mock/favouriteItems.json");
 
-        // if (Math.random() > 0.2) {
-        setTimeout(() => resolve(mockFavouriteItems), 1000);
-        // } else {
-        //     setTimeout(() => reject(new Error("fail")), 1000);
-        // }
+        if (Math.random() > 0.5) {
+            setTimeout(() => resolve(mockFavouriteItems), 1000);
+        } else {
+            const errorMessage =
+                "Error while getting favourite items. Please try again later.";
+            setTimeout(() => reject(new Error(errorMessage)), 1000);
+        }
     });
 }
 
