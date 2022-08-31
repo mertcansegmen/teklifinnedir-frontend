@@ -18,25 +18,19 @@ const FeaturedProducts = ({ className }) => {
         dispatch(getFeaturedProducts());
     }, [dispatch]);
 
-    if (loading)
-        return (
-            <div className={className}>
-                <Loader />
-            </div>
-        );
-
-    if (error)
-        return (
-            <div className={className}>
-                <h1>{error}</h1>
-            </div>
-        );
-
     return (
         <div className={className}>
             <h3>{t("featuredProducts")}</h3>
 
-            <ProductList products={featuredProducts} className="mt-4" />
+            <ProductList
+                products={featuredProducts}
+                error={error}
+                showRetryButton
+                onRetryButtonClick={() => dispatch(getFeaturedProducts())}
+                loading={loading}
+                loadingItemSize={12}
+                className="mt-4"
+            />
         </div>
     );
 };
