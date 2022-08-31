@@ -32,7 +32,7 @@ const ProductList = ({
     }
 
     if (loading) {
-        return <ProductListSL itemSize={loadingItemSize} />;
+        return <ProductListSL itemSize={loadingItemSize} {...props} />;
     }
 
     if (emptyMessage && !products?.length) {
