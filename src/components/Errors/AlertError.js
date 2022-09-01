@@ -1,5 +1,6 @@
 import React from "react";
 import { Alert, Button } from "antd";
+import { useTranslation } from "react-i18next";
 
 const AlertError = ({
     message,
@@ -7,6 +8,8 @@ const AlertError = ({
     onRetryButtonClick,
     ...props
 }) => {
+    const { t } = useTranslation();
+
     if (!showRetryButton && onRetryButtonClick) {
         throw new Error(
             "showRetryButton must be true if onRetryButtonClick is defined."
@@ -28,7 +31,7 @@ const AlertError = ({
                                 onRetryButtonClick && onRetryButtonClick(e)
                             }
                         >
-                            Retry
+                            {t("retry")}
                         </Button>
                     )}
                 </>

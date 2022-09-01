@@ -28,5 +28,6 @@
     "haveAnAccountLogin": "Already have an account? Log in.",
     "itemsForSaleTab": "FOR SALE",
     "soldItemsTab": "SOLD",
-    "favouritesTab": "FAVOURITES"
+    "favouritesTab": "FAVOURITES",
+    "retry": "Retry"
 }
