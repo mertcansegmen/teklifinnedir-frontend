@@ -11,7 +11,7 @@ async function fetchSoldItems(userId) {
     return new Promise((resolve, reject) => {
         const mockSoldItems = require("../assets/mock/soldItems.json");
 
-        if (Math.random() > 0.5) {
+        if (Math.random() > 0.1) {
             setTimeout(() => resolve(mockSoldItems), 1000);
         } else {
             const errorMessage =

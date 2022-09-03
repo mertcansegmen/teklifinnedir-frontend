@@ -11,7 +11,7 @@ async function fetchFeaturedProducts() {
     return new Promise((resolve, reject) => {
         const mockFeaturedProducts = require("../assets/mock/products.json");
 
-        if (Math.random() > 0.5) {
+        if (Math.random() > 0.1) {
             setTimeout(() => resolve(mockFeaturedProducts), 1500);
         } else {
             const errorMessage =
