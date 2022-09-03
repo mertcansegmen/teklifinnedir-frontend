@@ -14,7 +14,9 @@ async function fetchProduct() {
         if (Math.random() > 0.1) {
             setTimeout(() => resolve(mockProduct), 1500);
         } else {
-            setTimeout(() => reject(new Error("fail")), 1500);
+            const errorMessage =
+                "Error while getting this product. Please try again later.";
+            setTimeout(() => reject(new Error(errorMessage)), 1500);
         }
     });
 }
