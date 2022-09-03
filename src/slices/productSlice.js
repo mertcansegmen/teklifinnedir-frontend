@@ -11,11 +11,13 @@ async function fetchProduct() {
     return new Promise((resolve, reject) => {
         const mockProduct = require("../assets/mock/product.json");
 
-        // if (Math.random() > 0.2) {
-        setTimeout(() => resolve(mockProduct), 1500);
-        // } else {
-        //     setTimeout(() => reject(new Error("fail")), 1500);
-        // }
+        if (Math.random() > 0.1) {
+            setTimeout(() => resolve(mockProduct), 1500);
+        } else {
+            const errorMessage =
+                "Error while getting this product. Please try again later.";
+            setTimeout(() => reject(new Error(errorMessage)), 1500);
+        }
     });
 }
 

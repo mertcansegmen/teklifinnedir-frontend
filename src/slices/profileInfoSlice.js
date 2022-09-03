@@ -11,7 +11,7 @@ async function fetchProfileInfo() {
     return new Promise((resolve, reject) => {
         const mockProfileInfo = require("../assets/mock/profileInfo.json");
 
-        if (Math.random() > 0.5) {
+        if (Math.random() > 0.1) {
             setTimeout(() => resolve(mockProfileInfo), 1000);
         } else {
             const errorMessage =

@@ -12,7 +12,7 @@ async function fetchBrowsedProducts() {
         let mockBrowsedProducts = require("../assets/mock/products.json");
         mockBrowsedProducts = mockBrowsedProducts.slice(2, 8);
 
-        if (Math.random() > 0.5) {
+        if (Math.random() > 0.1) {
             setTimeout(() => resolve(mockBrowsedProducts), 800);
         } else {
             const errorMessage =

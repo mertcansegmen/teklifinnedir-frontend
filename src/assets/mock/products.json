@@ -4,167 +4,191 @@
         "name": "Sony Kulaklık",
         "location": "Izmir",
         "type": "buying",
-        "favorite": false,
+        "favourite": false,
         "category": {
             "name": "Electronics",
             "id": "electronics"
         },
         "price": 199,
         "currency": "TL",
-        "thumbnail": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
+        "thumbnail": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80",
+        "sold": false,
+        "removed": false
     },
     {
         "id": "e1ac25d3-9c40-4232-ba9d-8c3d5e7a0082",
         "name": "Koltuk Takımı",
         "location": "Istanbul",
         "type": "buying",
-        "favorite": false,
+        "favourite": false,
         "category": {
             "name": "Furniture",
             "id": "furniture"
         },
         "price": 1225,
         "currency": "TL",
-        "thumbnail": "https://www.evmoda.com.tr/ewa-modern-koltuk-takimi-50498-49-B.jpg"
+        "thumbnail": "https://www.evmoda.com.tr/ewa-modern-koltuk-takimi-50498-49-B.jpg",
+        "sold": false,
+        "removed": false
     },
     {
         "id": "02ed313d-3b47-4640-9631-423e69037892",
         "name": "Xiaomi Redmi Note 9",
         "location": "Konya",
         "type": "buying",
-        "favorite": false,
+        "favourite": false,
         "category": {
             "name": "Electronics",
             "id": "electronics"
         },
         "price": 1950,
         "currency": "TL",
-        "thumbnail": "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/xiaomi/thumb/TeoriV2-107890-11_large.jpg"
+        "thumbnail": "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/xiaomi/thumb/TeoriV2-107890-11_large.jpg",
+        "sold": false,
+        "removed": false
     },
     {
         "id": "9d672c1f-6a03-47ca-bfe5-142b1e624c84",
         "name": "2011 Renault Kango",
         "location": "Erzincan",
         "type": "buying",
-        "favorite": false,
+        "favourite": false,
         "category": {
             "name": "Car",
             "id": "car"
         },
         "price": 89000,
         "currency": "TL",
-        "thumbnail": "https://1896481119.rsc.cdn77.org/large/292/312/f29231298c4eb26b459b761b9ed62587.jpg"
+        "thumbnail": "https://1896481119.rsc.cdn77.org/large/292/312/f29231298c4eb26b459b761b9ed62587.jpg",
+        "sold": false,
+        "removed": false
     },
     {
         "id": "743c051c-ec54-491c-80b1-802089da00ae",
         "name": "Salcano Bisiklet",
         "location": "Manisa",
         "type": "buying",
-        "favorite": false,
+        "favourite": false,
         "category": {
             "name": "Outdoor",
             "id": "outdoor"
         },
         "price": 1200,
         "currency": "TL",
-        "thumbnail": "https://www.salcano.com/images/6.jpg"
+        "thumbnail": "https://www.salcano.com/images/6.jpg",
+        "sold": false,
+        "removed": false
     },
     {
         "id": "686ab01b-0754-443b-8804-1d3020151a2b",
         "name": "Kıyafet Dolabı",
         "location": "Van",
         "type": "buying",
-        "favorite": false,
+        "favourite": false,
         "category": {
             "name": "Furniture",
             "id": "furniture"
         },
         "price": 180,
         "currency": "TL",
-        "thumbnail": "https://cdn.evkur.com.tr/c/Product/thumbs/b1_x6y8xa_500.jpg"
+        "thumbnail": "https://cdn.evkur.com.tr/c/Product/thumbs/b1_x6y8xa_500.jpg",
+        "sold": false,
+        "removed": false
     },
     {
         "id": "7f7c68cc-31ae-424a-ba15-fcb2ccb4235f",
         "name": "MSI Oyuncu Laptopu",
         "location": "Istanbul",
         "type": "buying",
-        "favorite": true,
+        "favourite": true,
         "category": {
             "name": "Electronics",
             "id": "electronics"
         },
         "price": 4950,
         "currency": "TL",
-        "thumbnail": "https://i0.shbdn.com/photos/12/18/77/x5_921121877pcp.jpg"
+        "thumbnail": "https://i0.shbdn.com/photos/12/18/77/x5_921121877pcp.jpg",
+        "sold": false,
+        "removed": false
     },
     {
         "id": "7e8464fa-ea8e-4fe8-b930-b529d3b1df6c",
         "name": "Apple Airpods",
         "location": "Istanbul",
         "type": "buying",
-        "favorite": false,
+        "favourite": false,
         "category": {
             "name": "Electronics",
             "id": "electronics"
         },
         "price": 850,
         "currency": "TL",
-        "thumbnail": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MV7N2?wid=1144&hei=1144&fmt=jpeg&qlt=95&.v=1551489688005"
+        "thumbnail": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MV7N2?wid=1144&hei=1144&fmt=jpeg&qlt=95&.v=1551489688005",
+        "sold": false,
+        "removed": false
     },
     {
         "id": "a10a1dac-3ef8-40c5-a73c-4249e04ab11f",
         "name": "PS4 Oyun Konsolu Slim 500 GB",
         "location": "Istanbul",
         "type": "buying",
-        "favorite": false,
+        "favourite": false,
         "category": {
             "name": "Electronics",
             "id": "electronics"
         },
         "price": 1450,
         "currency": "TL",
-        "thumbnail": "https://cdn.akakce.com/sony/slim-500-gb-konsol-dualshock-z.jpg"
+        "thumbnail": "https://cdn.akakce.com/sony/slim-500-gb-konsol-dualshock-z.jpg",
+        "sold": false,
+        "removed": false
     },
     {
         "id": "12227029-982f-48e4-afbe-7e590390fa99",
         "name": "Samsung Mikrodalga Fırın",
         "location": "Kocaeli",
         "type": "buying",
-        "favorite": false,
+        "favourite": false,
         "category": {
             "name": "Appliances",
             "id": "appliances"
         },
         "price": 450,
         "currency": "TL",
-        "thumbnail": "https://cdn.cimri.io/image/1200x1200/samsungmikrodalgafrnlarfiyatlar_130914914.jpg"
+        "thumbnail": "https://cdn.cimri.io/image/1200x1200/samsungmikrodalgafrnlarfiyatlar_130914914.jpg",
+        "sold": false,
+        "removed": false
     },
     {
         "id": "3a887ff4-a4d8-44de-9f0a-e4499e03be2d",
         "name": "Yün Halı",
         "location": "Izmir",
         "type": "buying",
-        "favorite": false,
+        "favourite": false,
         "category": {
             "name": "Furniture",
             "id": "furniture"
         },
         "price": 90,
         "currency": "TL",
-        "thumbnail": "https://www.halistores.com/100-dogal-yun-orgu-hali-jade-kahve-yun-hali-401809-93-O.jpg"
+        "thumbnail": "https://www.halistores.com/100-dogal-yun-orgu-hali-jade-kahve-yun-hali-401809-93-O.jpg",
+        "sold": false,
+        "removed": false
     },
     {
         "id": "e610df6a-d4d7-46b4-b81d-27f9e5a76a9c",
         "name": "Philips Ekmek Kızartma Makinesi",
         "location": "Istanbul",
         "type": "buying",
-        "favorite": false,
+        "favourite": false,
         "category": {
             "name": "Appliances",
             "id": "appliances"
         },
         "price": 130,
         "currency": "TL",
-        "thumbnail": "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/philips/thumb/v2-86226-1_large.jpg"
+        "thumbnail": "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/philips/thumb/v2-86226-1_large.jpg",
+        "sold": false,
+        "removed": false
     }
 ]

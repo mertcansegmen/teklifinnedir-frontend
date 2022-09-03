@@ -11,7 +11,7 @@ async function fetchFavouriteItems(userId) {
     return new Promise((resolve, reject) => {
         const mockFavouriteItems = require("../assets/mock/favouriteItems.json");
 
-        if (Math.random() > 0.5) {
+        if (Math.random() > 0.1) {
             setTimeout(() => resolve(mockFavouriteItems), 1000);
         } else {
             const errorMessage =

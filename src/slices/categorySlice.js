@@ -11,7 +11,7 @@ async function fetchCategories() {
     return new Promise((resolve, reject) => {
         const mockCategories = require("../assets/mock/categories.json");
 
-        if (Math.random() > 0.5) {
+        if (Math.random() > 0.1) {
             setTimeout(() => resolve(mockCategories), 1000);
         } else {
             const errorMessage =

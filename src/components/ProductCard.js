@@ -3,9 +3,12 @@ import React from "react";
 import { Card } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import { useTranslation } from "react-i18next";
+import FavouriteButton from "./FavouriteButton";
 
 const ProductCard = ({ product, onFavoriteButtonClick, className, style }) => {
     const { t } = useTranslation();
+
+    const disabled = product?.sold || product?.removed;
 
     return (
         <Card
@@ -14,9 +17,14 @@ const ProductCard = ({ product, onFavoriteButtonClick, className, style }) => {
         >
             {/* Product Image */}
             <div className="ratio ratio-1x1">
-                <LinkContainer to={`/product/${product?.id}`}>
+                <LinkContainer
+                    to={`/product/${product?.id}`}
+                    onClick={(e) => disabled && e.preventDefault()}
+                >
                     <Card.Img
-                        className="product-image hover-pointer"
+                        className={`product-image ${
+                            disabled ? "opacity-50" : "hover-pointer"
+                        }`}
                         variant="top"
                         src={product?.thumbnail}
                     />
@@ -26,7 +34,8 @@ const ProductCard = ({ product, onFavoriteButtonClick, className, style }) => {
                 {/* Product Name */}
                 <LinkContainer
                     to={`/product/${product?.id}`}
-                    className="hover-pointer"
+                    className={disabled ? "opacity-50" : "hover-pointer"}
+                    onClick={(e) => disabled && e.preventDefault()}
                 >
                     <span className="fw-700 ellipsis-1">
                         <small>{product?.name}</small>
@@ -61,27 +70,24 @@ const ProductCard = ({ product, onFavoriteButtonClick, className, style }) => {
             </h6>
 
             {/* Favorite Button */}
-            {product?.favorite ? (
-                <i
-                    className="fas fa-heart position-absolute fa-lg hover-pointer product-card-favorite-icon product-card-favorite-icon-toggled"
-                    onClick={() =>
-                        onFavoriteButtonClick &&
-                        onFavoriteButtonClick(product?.id)
-                    }
-                ></i>
-            ) : (
-                <i
-                    className="far fa-heart position-absolute fa-lg hover-pointer product-card-favorite-icon "
-                    onClick={() =>
-                        onFavoriteButtonClick &&
-                        onFavoriteButtonClick(product?.id)
-                    }
-                ></i>
-            )}
+            <FavouriteButton
+                className={`position-absolute`}
+                style={{ top: "10px", right: "10px" }}
+                disabled={disabled}
+                toggled={product?.favourite}
+                onClick={(e) =>
+                    disabled
+                        ? e.preventDefault()
+                        : onFavoriteButtonClick &&
+                          onFavoriteButtonClick(product?.id)
+                }
+            />
 
             {/* Price */}
             <h6
-                className="position-absolute"
+                className={`position-absolute ${
+                    disabled ? "opacity-50" : "hover-pointer"
+                }`}
                 style={{ bottom: "10px", right: "10px" }}
             >
                 <span className="text-pri">{`${product?.price} ${product?.currency}`}</span>
