@@ -1,11 +1,13 @@
 import React, { useEffect } from "react";
 import { Col, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
+import ResultError from "../components/Errors/ResultError";
 import ImageCarousel from "../components/ImageCarousel";
 import ListingDetails from "../components/ListingDetails";
 import ListingPrice from "../components/ListingPrice";
 import ListingUser from "../components/ListingUser";
 import Loader from "../components/Loader";
+import ProductScreenSL from "../components/SkeletonLoaders/ProductScreenSL";
 import { getProduct } from "../slices/productSlice";
 
 const ProductScreen = ({ match }) => {
@@ -17,9 +19,21 @@ const ProductScreen = ({ match }) => {
         dispatch(getProduct(match?.params?.id));
     }, [dispatch, match]);
 
-    if (loading) return <Loader />;
+    if (error) {
+        return (
+            <ResultError
+                title={error}
+                showRetryButton
+                onRetryButtonClick={() =>
+                    dispatch(getProduct(match?.params?.id))
+                }
+            />
+        );
+    }
 
-    if (error) return <h3>{error}</h3>;
+    if (loading) {
+        return <ProductScreenSL />;
+    }
 
     return (
         <div className="mt-5">
