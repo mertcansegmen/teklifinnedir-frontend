@@ -9,7 +9,7 @@
         "long": "41.43428234"
     },
     "type": "buying",
-    "favorite": true,
+    "favourite": true,
     "category": {
         "name": "Electronics",
         "id": "electronics",
@@ -34,5 +34,7 @@
         "https://www.sony.com.tr/image/cc3d84a02db3375b256213cdf479117d?fmt=pjpeg&wid=1014&hei=396&bgcolor=F1F5F9&bgc=F1F5F9"
     ],
     "seenCount": 1198,
-    "favoriteCount": 76
+    "favouriteCount": 76,
+    "sold": true,
+    "removed": false
 }
