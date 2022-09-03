@@ -41,7 +41,7 @@ const ProductScreen = ({ match }) => {
                         category={product?.category}
                         location={product?.location}
                         seenCount={product?.seenCount}
-                        favoriteCount={product?.favoriteCount}
+                        favouriteCount={product?.favouriteCount}
                     />
 
                     <ListingUser

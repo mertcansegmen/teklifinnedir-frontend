@@ -7,7 +7,7 @@ const ListingDetails = ({
     location,
     category,
     seenCount,
-    favoriteCount,
+    favouriteCount,
 }) => {
     return (
         <div className={className}>
@@ -32,7 +32,7 @@ const ListingDetails = ({
             </small>
             <i className="fas fa-heart fa-xs ms-3"></i>
             <small>
-                <small className="fw-700 ms-1">{favoriteCount}</small>
+                <small className="fw-700 ms-1">{favouriteCount}</small>
             </small>
         </div>
     );
