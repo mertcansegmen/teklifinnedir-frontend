@@ -8,7 +8,6 @@ import { getItemsForSale } from "../slices/itemsForSaleSlice";
 import { getSoldItems } from "../slices/soldItemsSlice";
 import { getFavouriteItems } from "../slices/favouriteItemsSlice";
 import ProductList from "../components/ProductList";
-import ProfileInfoSL from "../components/SkeletonLoaders/ProfileInfoSL";
 
 const { TabPane } = Tabs;
 

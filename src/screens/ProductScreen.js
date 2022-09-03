@@ -6,7 +6,6 @@ import ImageCarousel from "../components/ImageCarousel";
 import ListingDetails from "../components/ListingDetails";
 import ListingPrice from "../components/ListingPrice";
 import ListingUser from "../components/ListingUser";
-import Loader from "../components/Loader";
 import ProductScreenSL from "../components/SkeletonLoaders/ProductScreenSL";
 import { getProduct } from "../slices/productSlice";
 
