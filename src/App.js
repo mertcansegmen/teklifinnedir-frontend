@@ -40,7 +40,7 @@ function App() {
                         component={TermsAndConditionsScreen}
                         exact
                     />
-                    <Route path="/profile" component={ProfileScreen} exact />
+                        <Route path="/profile/:id" component={ProfileScreen} />
                     <Route path="/login" component={LoginScreen} exact />
                     <Route path="/signup" component={RegisterScreen} exact />
                     <Route path="/" component={HomeScreen} exact />

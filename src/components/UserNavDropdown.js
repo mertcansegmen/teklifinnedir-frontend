@@ -1,7 +1,7 @@
 import React from "react";
 import { NavDropdown } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { LinkContainer } from "react-router-bootstrap";
 import { logout } from "../slices/userSlice";
 import SelectLanguage from "./SelectLanguage";
@@ -10,6 +10,8 @@ const UserNavDropdown = ({ user, className }) => {
     const { t } = useTranslation();
 
     const dispatch = useDispatch();
+
+    const { userInfo } = useSelector((state) => state.userInfo);
 
     const handleLogoutButtonClick = () => {
         dispatch(logout());
@@ -28,7 +30,7 @@ const UserNavDropdown = ({ user, className }) => {
                     </div>
                 }
             >
-                <LinkContainer to="/profile">
+                <LinkContainer to={`/profile/${userInfo?.id || ""}`}>
                     <NavDropdown.Item>Profile</NavDropdown.Item>
                 </LinkContainer>
                 <NavDropdown.Item onClick={handleLogoutButtonClick}>

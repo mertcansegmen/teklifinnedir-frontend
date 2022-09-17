@@ -15,7 +15,7 @@ const ListingUser = ({
 }) => {
     return (
         <div className={`d-flex align-items-center ${className}`}>
-            <Link to={`/user/${userId}`}>
+            <Link to={`/profile/${userId}`}>
                 <span className=" ratio-1x1">
                     <img
                         className="listing-user-image hover-pointer"
