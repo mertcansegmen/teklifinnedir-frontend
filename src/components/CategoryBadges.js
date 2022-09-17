@@ -18,6 +18,8 @@ const CategoryBadges = (props) => {
         (state) => state.categories
     );
 
+    // TODO: translation for categories
+
     useEffect(() => {
         dispatch(getCategories());
     }, [dispatch]);
