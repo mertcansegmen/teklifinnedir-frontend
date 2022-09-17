@@ -85,7 +85,7 @@ const ProfileScreen = () => {
                         }
                         loading={itemsForSaleLoading}
                         loadingItemSize={12}
-                        emptyMessage="This user has no items for sale."
+                        emptyMessage={t("noItemsForSale")} // TODO: translate empty messages
                     />
                 </TabPane>
 
@@ -99,7 +99,7 @@ const ProfileScreen = () => {
                         }
                         loading={soldItemsLoading}
                         loadingItemSize={12}
-                        emptyMessage="This user has not sold any items."
+                        emptyMessage={t("noItemsSold")}
                     />
                 </TabPane>
 
@@ -115,7 +115,7 @@ const ProfileScreen = () => {
                             }
                             loading={favouriteItemsLoading}
                             loadingItemSize={12}
-                            emptyMessage="No favourite items found."
+                            emptyMessage={t("noFavouriteItemFound")}
                         />
                     </TabPane>
                 )}

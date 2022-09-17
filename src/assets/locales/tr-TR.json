@@ -29,5 +29,8 @@
     "itemsForSaleTab": "SATIYOR",
     "soldItemsTab": "SATILDI",
     "favouritesTab": "FAVORİLER",
-    "retry": "Tekrar Dene"
+    "retry": "Tekrar Dene",
+    "noItemsForSale": "Bu kullanıcının satışta hiç ürünü yok.",
+    "noItemsSold": "Bu kullanıcı hiç ürün satışı yapmamış.",
+    "noFavouriteItemFound": "Favori ürün bulunmadı."
 }

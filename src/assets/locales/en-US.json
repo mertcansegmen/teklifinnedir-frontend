@@ -29,5 +29,8 @@
     "itemsForSaleTab": "FOR SALE",
     "soldItemsTab": "SOLD",
     "favouritesTab": "FAVOURITES",
-    "retry": "Retry"
+    "retry": "Retry",
+    "noItemsForSale": "This user has no items for sale.",
+    "noItemsSold": "This user has not sold any items.",
+    "noFavouriteItemFound": "No favourite items found."
 }
