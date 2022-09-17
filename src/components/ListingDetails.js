@@ -13,7 +13,7 @@ const ListingDetails = ({
         <div className={className}>
             <i className="fas fa-map-marker-alt"></i>
             <span className="ms-2">{location?.city}</span>
-            <Link to={`search?categories=${category?.id}`} className="ms-3">
+            <Link to={`/search?categories=${category?.id}`} className="ms-3">
                 <Button
                     className="max-radius"
                     size="sm"
