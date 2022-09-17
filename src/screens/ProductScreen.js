@@ -59,7 +59,7 @@ const ProductScreen = ({ match }) => {
 
                     <ListingUser
                         className="mt-3"
-                        userImage="https://kstu.edu.tr/kstu-file/uploads/default-user-image.png"
+                        userImage={product?.user?.profilePicture}
                         userRating={product?.user?.rating}
                         userFirstName={product?.user?.firstName}
                         userLastName={product?.user?.lastName}
