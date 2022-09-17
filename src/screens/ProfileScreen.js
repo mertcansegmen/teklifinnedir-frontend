@@ -11,14 +11,12 @@ import ProductList from "../components/ProductList";
 
 const { TabPane } = Tabs;
 
-const ProfileScreen = () => {
+const ProfileScreen = ({ match }) => {
     const { t } = useTranslation();
 
     const dispatch = useDispatch();
 
     const [activeTabKey, setActiveTabKey] = useState("itemsForSale");
-
-    const { userInfo } = useSelector((state) => state.userInfo);
 
     const {
         profileInfo,
@@ -45,13 +43,14 @@ const ProfileScreen = () => {
     } = useSelector((state) => state.favouriteItems);
 
     useEffect(() => {
-        if (userInfo?.id) {
-            dispatch(getProfileInfo(userInfo.id));
-            dispatch(getItemsForSale(userInfo.id));
-            dispatch(getSoldItems(userInfo.id));
-            dispatch(getFavouriteItems(userInfo.id));
-        }
-    }, [dispatch, userInfo]);
+        const userId = match?.params?.id;
+        //TODO: maybe check if userId is valid, and if not, redirect to 404 page
+
+        dispatch(getProfileInfo(userId));
+        dispatch(getItemsForSale(userId));
+        dispatch(getSoldItems(userId));
+        dispatch(getFavouriteItems(userId));
+    }, [dispatch, match]);
 
     return (
         <>
@@ -64,7 +63,8 @@ const ProfileScreen = () => {
                 error={profileInfoError}
                 showRetryButton
                 onRetryButtonClick={() =>
-                    userInfo?.id && dispatch(getProfileInfo(userInfo.id))
+                    match?.params?.id &&
+                    dispatch(getProfileInfo(match.params.id))
                 }
                 className={"mt-5"}
             />
@@ -80,12 +80,12 @@ const ProfileScreen = () => {
                         error={itemsForSaleError}
                         showRetryButton
                         onRetryButtonClick={() =>
-                            userInfo?.id &&
-                            dispatch(getItemsForSale(userInfo.id))
+                            match?.params?.id &&
+                            dispatch(getItemsForSale(match.params.id))
                         }
                         loading={itemsForSaleLoading}
                         loadingItemSize={12}
-                        emptyMessage={t("noItemsForSale")} // TODO: translate empty messages
+                        emptyMessage={t("noItemsForSale")}
                     />
                 </TabPane>
 
@@ -95,7 +95,8 @@ const ProfileScreen = () => {
                         error={soldItemsError}
                         showRetryButton
                         onRetryButtonClick={() =>
-                            userInfo?.id && dispatch(getSoldItems(userInfo.id))
+                            match?.params?.id &&
+                            dispatch(getSoldItems(match.params.id))
                         }
                         loading={soldItemsLoading}
                         loadingItemSize={12}
@@ -110,8 +111,8 @@ const ProfileScreen = () => {
                             error={favouriteItemsError}
                             showRetryButton
                             onRetryButtonClick={() =>
-                                userInfo?.id &&
-                                dispatch(getFavouriteItems(userInfo.id))
+                                match?.params?.id &&
+                                dispatch(getFavouriteItems(match.params.id))
                             }
                             loading={favouriteItemsLoading}
                             loadingItemSize={12}
