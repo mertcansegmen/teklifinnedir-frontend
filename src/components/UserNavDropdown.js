@@ -31,10 +31,10 @@ const UserNavDropdown = ({ user, className }) => {
                 }
             >
                 <LinkContainer to={`/profile/${userInfo?.id || ""}`}>
-                    <NavDropdown.Item>Profile</NavDropdown.Item>
+                    <NavDropdown.Item>{t("profile")}</NavDropdown.Item>
                 </LinkContainer>
                 <NavDropdown.Item onClick={handleLogoutButtonClick}>
-                    Logout
+                    {t("logout")}
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <LinkContainer to="/about">

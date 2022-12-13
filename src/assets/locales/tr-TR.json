@@ -1,5 +1,7 @@
 {
     "categories": "Kategoriler",
+    "profile": "Profil",
+    "logout": "Çıkış Yap",
     "about": "Hakkımızda",
     "privacyPolicy": "Gizlilik Sözleşmesi",
     "termsAndConditions": "Şartlar ve Koşullar",
@@ -32,5 +34,6 @@
     "retry": "Tekrar Dene",
     "noItemsForSale": "Bu kullanıcının satışta hiç ürünü yok.",
     "noItemsSold": "Bu kullanıcı hiç ürün satışı yapmamış.",
-    "noFavouriteItemFound": "Favori ürün bulunmadı."
+    "noFavouriteItemFound": "Favori ürün bulunmadı.",
+    "sendMessage": "Mesaj Gönder"
 }

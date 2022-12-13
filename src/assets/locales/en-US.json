@@ -1,5 +1,7 @@
 {
     "categories": "Categories",
+    "profile": "Profile",
+    "logout": "Logout",
     "about": "About",
     "privacyPolicy": "Privacy Policy",
     "termsAndConditions": "Terms and Conditions",
@@ -32,5 +34,6 @@
     "retry": "Retry",
     "noItemsForSale": "This user has no items for sale.",
     "noItemsSold": "This user has not sold any items.",
-    "noFavouriteItemFound": "No favourite items found."
+    "noFavouriteItemFound": "No favourite items found.",
+    "sendMessage": "Send Message"
 }

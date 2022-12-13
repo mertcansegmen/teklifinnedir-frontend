@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 import "./ListingUser.css";
 import Rating from "./Rating";
@@ -13,6 +14,8 @@ const ListingUser = ({
     userRating,
     className,
 }) => {
+    const { t } = useTranslation();
+
     return (
         <div className={`d-flex align-items-center ${className}`}>
             <Link to={`/profile/${userId}`}>
@@ -33,7 +36,7 @@ const ListingUser = ({
 
             <Link to={`/chat/${userId}`}>
                 <Button variant="pri" className="ms-3">
-                    Send Message <i className="fas fa-chevron-right"></i>
+                    {t("sendMessage")} <i className="fas fa-chevron-right"></i>
                 </Button>
             </Link>
         </div>
