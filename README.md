@@ -1,6 +1,6 @@
 # teklifinnedir-frontend
 
-`teklifinnedir-frontend` is a React app that allows users to buy and sell used items to others locally.
+`teklifinnedir-frontend` is the frontend of the Teklifin Nedir web app that allows users to buy and sell used items to others locally. Written in React.js.
 
 ## Requirements
 
